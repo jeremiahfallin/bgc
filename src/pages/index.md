@@ -23,6 +23,8 @@ intro:
       text: This is Summer Camps.
     - image: /img/IMG_4678.jpg
       text: Technology for all.
+    - image: /img/IMG_4648 - Blurb.jpg
+      text: Our gym.
   heading: What we offer
   description: '???'
 main:
