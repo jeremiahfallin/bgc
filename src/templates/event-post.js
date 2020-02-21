@@ -5,7 +5,6 @@ import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 
 import Layout from "../components/Layout";
-import Hero from "../components/Hero";
 import Content, { HTMLContent } from "../components/Content";
 
 export const EventPostTemplate = ({
