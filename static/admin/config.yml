@@ -287,3 +287,102 @@ collections:
                   },
                 ],
             }
+      - file: "src/pages/summer/index.md"
+        label: "Summer Page"
+        name: "summer"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "summer-page",
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - {
+              label: Files List,
+              name: filesList,
+              widget: list,
+              allow_add: true,
+              fields:
+                [
+                  { label: Text, name: text, widget: string },
+                  {
+                    label: Files,
+                    name: files,
+                    widget: list,
+                    allow_add: true,
+                    fields:
+                      [
+                        { label: Text, name: text, widget: text },
+                        { label: File, name: file, widget: file },
+                      ],
+                  },
+                ],
+            }
+      - file: "src/pages/junior/index.md"
+        label: "Junior Club Page"
+        name: "junior"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "junior-page",
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - {
+              label: Files List,
+              name: filesList,
+              widget: list,
+              allow_add: true,
+              fields:
+                [
+                  { label: Text, name: text, widget: string },
+                  {
+                    label: Files,
+                    name: files,
+                    widget: list,
+                    allow_add: true,
+                    fields:
+                      [
+                        { label: Text, name: text, widget: text },
+                        { label: File, name: file, widget: file },
+                      ],
+                  },
+                ],
+            }
+      - file: "src/pages/forms/index.md"
+        label: "Forms Page"
+        name: "forms"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "forms-page",
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - {
+              label: Files List,
+              name: filesList,
+              widget: list,
+              allow_add: true,
+              fields:
+                [
+                  { label: Text, name: text, widget: string },
+                  {
+                    label: Files,
+                    name: files,
+                    widget: list,
+                    allow_add: true,
+                    fields:
+                      [
+                        { label: Text, name: text, widget: text },
+                        { label: File, name: file, widget: file },
+                      ],
+                  },
+                ],
+            }
