@@ -3,20 +3,14 @@ import { Link } from "gatsby";
 import logo from "../img/BoysandGirlsLogoHorizontal.png";
 
 const Navbar = () => {
-  const [active, setActive] = useState(true);
-  const [navBarActiveClass, setNavBarActiveClass] = useState("");
+  const [active, setActive] = useState(false);
+  const [activeSubNav, setActiveSubNav] = useState(false);
 
-  const toggleHamburger = () => {
-    // toggle the active boolean in the state
-    setActive(a => !a);
-    // after state has been updated,
-    (() => {
-      // set the variable in state for the navbar accordingly
-      active ? setNavBarActiveClass("is-active") : setNavBarActiveClass("");
-    })();
-    console.log(active);
-    console.log(navBarActiveClass);
-  };
+  let subNav = {};
+  subNav.posts = [
+    { slug: "/", title: "Home" },
+    { slug: "/events", title: "Events" }
+  ];
 
   return (
     <nav
@@ -35,16 +29,19 @@ const Navbar = () => {
           </Link>
           {/* Hamburger menu */}
           <div
-            className={`navbar-burger burger ${navBarActiveClass}`}
+            className={`navbar-burger burger ${active ? "is-active" : ""}`}
             data-target="navMenu"
-            onClick={() => toggleHamburger()}
+            onClick={() => setActive(a => !a)}
           >
             <span />
             <span />
             <span />
           </div>
         </div>
-        <div id="navMenu" className={`navbar-menu ${navBarActiveClass}`}>
+        <div
+          id="navMenu"
+          className={`navbar-menu ${active ? "is-active" : ""}`}
+        >
           <div className="navbar-start has-text-centered">
             <Link className="navbar-item" to="/about">
               About
@@ -52,7 +49,35 @@ const Navbar = () => {
             <Link className="navbar-item" to="/involvement">
               Get Involved
             </Link>
-
+            <div
+              className={`navbar-group navbar-item ${
+                activeSubNav ? "active" : ""
+              }`}
+            >
+              <span
+                onClick={() => {
+                  setActiveSubNav(a => !a);
+                }}
+              >
+                All of Blog
+              </span>
+              <div className="navbar-group-links">
+                <Link to="/blog" className="navbar-item">
+                  All Posts
+                </Link>
+                {subNav.posts.map((link, index) => {
+                  return (
+                    <Link
+                      to={link.slug}
+                      key={"posts-subnav-link-" + index}
+                      className="navbar-item"
+                    >
+                      {link.title}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
             <Link className="navbar-item" to="/programs">
               Programs
             </Link>

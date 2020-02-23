@@ -136,6 +136,35 @@ footer.footer
   @else
     background-color: transparent
 
+
+.navbar-group
+  cursor: pointer
+
+.navbar-group-links
+  position: absolute
+  top: 100%
+  left: 0
+  width: auto
+  background: white
+  max-height: 0
+  overflow: hidden
+  transition: 0.3s ease all
+
+.navbar-item:hover,
+.navbar-item.active,
+.navbar-item:focus 
+  color: $primary
+  border-bottom-color: currentColor
+
+.navbar-group.active .navbar-group-links
+  max-height: 100vh
+  opacity: 1
+  transition: 0.2s ease all
+
+.navbar-span:hover
+  color: var($primary)
+
+
 // TOC
 .content.toc
   ul
