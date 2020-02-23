@@ -258,6 +258,8 @@ collections:
       - file: "src/pages/board/index.md"
         label: "Board Page"
         name: "board"
+        media_folder: ''
+        public_folder: ''
         fields:
           - {
               label: "Template Key",

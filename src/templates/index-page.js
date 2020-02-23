@@ -45,7 +45,6 @@ export const IndexPageTemplate = ({
                   </div>
                 </div>
                 <Features gridItems={intro.blurbs} />
-                <DonationHero />
                 <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">Events</h3>
                   <EventsRoll />
