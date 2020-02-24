@@ -3,7 +3,6 @@ import CMS from "netlify-cms-app";
 // import cloudinary from 'netlify-cms-media-library-cloudinary'
 
 import AboutPagePreview from "./preview-templates/AboutPagePreview";
-import BlogPostPreview from "./preview-templates/BlogPostPreview";
 import BoardPagePreview from "./preview-templates/BoardPagePreview";
 import EventsPagePreview from "./preview-templates/EventsPagePreview";
 import EventPostPreview from "./preview-templates/EventPostPreview";
@@ -21,7 +20,6 @@ import SummerPagePreview from "./preview-templates/SummerPagePreview";
 // CMS.registerMediaLibrary(cloudinary)
 
 CMS.registerPreviewTemplate("about", AboutPagePreview);
-CMS.registerPreviewTemplate("blog", BlogPostPreview);
 CMS.registerPreviewTemplate("board", BoardPagePreview);
 CMS.registerPreviewTemplate("events", EventsPagePreview);
 CMS.registerPreviewTemplate("events-post", EventPostPreview);

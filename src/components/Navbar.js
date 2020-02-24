@@ -170,9 +170,6 @@ const Navbar = () => {
             <Link className="navbar-item" to="/events">
               Events
             </Link>
-            <Link className="navbar-item" to="/blog">
-              Blog
-            </Link>
           </div>
           <div className="navbar-end has-text-centered">
             <div className="navbar-item">
