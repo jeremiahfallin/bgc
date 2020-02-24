@@ -5,7 +5,6 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import Features from "../components/Features";
-import BlogRoll from "../components/BlogRoll";
 import EventsRoll from "../components/EventsRoll";
 import SportsPostsRoll from "../components/SportsPostsRoll";
 import DonationHero from "../components/DonationHero";

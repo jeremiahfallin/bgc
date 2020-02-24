@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { kebabCase } from "lodash";
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
+
 import Layout from "../components/Layout";
 
 export const BoardPostTemplate = ({ filesList, title, helmet }) => {

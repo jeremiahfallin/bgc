@@ -3,10 +3,13 @@ import PropTypes from "prop-types";
 import { kebabCase } from "lodash";
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
+
 import Layout from "../components/Layout";
+import Hero from "../components/Hero";
 import Content, { HTMLContent } from "../components/Content";
 
 export const SummerPageTemplate = ({
+  image,
   content,
   contentComponent,
   description,
@@ -20,6 +23,7 @@ export const SummerPageTemplate = ({
   return (
     <section className="section">
       {helmet || ""}
+      <Hero {...{ image, title }} />
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
@@ -71,6 +75,7 @@ const SummerPage = ({ data }) => {
   return (
     <Layout>
       <SummerPageTemplate
+        image={post.image}
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
@@ -108,6 +113,13 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         description
         files {
           text

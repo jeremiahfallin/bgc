@@ -1,16 +1,53 @@
 import React, { useState } from "react";
-import { Link } from "gatsby";
+import { Link, graphql, useStaticQuery } from "gatsby";
 import logo from "../img/BoysandGirlsLogoHorizontal.png";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
-  const [activeSubNav, setActiveSubNav] = useState(false);
+  const [activeAboutNav, setActiveAboutNav] = useState(false);
+  const [activeProgramsNav, setActiveProgramsNav] = useState(false);
+  const [activeSportsNav, setActiveSportsNav] = useState(false);
+
+  const {
+    allMarkdownRemark: { edges: posts }
+  } = useStaticQuery(
+    graphql`
+      query SportsDropdownQuery {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          filter: { frontmatter: { templateKey: { eq: "sports-post" } } }
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
+      }
+    `
+  );
 
   let subNav = {};
-  subNav.posts = [
-    { slug: "/", title: "Home" },
-    { slug: "/events", title: "Events" }
+  subNav.programs = [
+    { slug: "/summer", title: "Summer Programs" },
+    { slug: "/junior", title: "Junior Club" }
   ];
+  subNav.about = [
+    { slug: "/about", title: "Us" },
+    { slug: "/forms", title: "Club Forms" }
+  ];
+  subNav.sports = [];
+  posts.map(post => {
+    return subNav.sports.push({
+      slug: post.node.fields.slug,
+      title: post.node.frontmatter.title
+    });
+  });
 
   return (
     <nav
@@ -43,29 +80,20 @@ const Navbar = () => {
           className={`navbar-menu ${active ? "is-active" : ""}`}
         >
           <div className="navbar-start has-text-centered">
-            <Link className="navbar-item" to="/about">
-              About
-            </Link>
-            <Link className="navbar-item" to="/involvement">
-              Get Involved
-            </Link>
             <div
               className={`navbar-group navbar-item ${
-                activeSubNav ? "active" : ""
+                activeAboutNav ? "active" : ""
               }`}
             >
               <span
                 onClick={() => {
-                  setActiveSubNav(a => !a);
+                  setActiveAboutNav(a => !a);
                 }}
               >
-                All of Blog
+                About
               </span>
               <div className="navbar-group-links">
-                <Link to="/blog" className="navbar-item">
-                  All Posts
-                </Link>
-                {subNav.posts.map((link, index) => {
+                {subNav.about.map((link, index) => {
                   return (
                     <Link
                       to={link.slug}
@@ -78,12 +106,67 @@ const Navbar = () => {
                 })}
               </div>
             </div>
-            <Link className="navbar-item" to="/programs">
-              Programs
+            <Link className="navbar-item" to="/involvement">
+              Get Involved
             </Link>
-            <Link className="navbar-item" to="/sports">
-              Sports
-            </Link>
+            <div
+              className={`navbar-group navbar-item ${
+                activeProgramsNav ? "active" : ""
+              }`}
+            >
+              <span
+                onClick={() => {
+                  setActiveProgramsNav(a => !a);
+                }}
+              >
+                Programs
+              </span>
+              <div className="navbar-group-links">
+                <Link to="/programs" className="navbar-item">
+                  Programs Overview
+                </Link>
+                {subNav.programs.map((link, index) => {
+                  return (
+                    <Link
+                      to={link.slug}
+                      key={"posts-subnav-link-" + index}
+                      className="navbar-item"
+                    >
+                      {link.title}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+            <div
+              className={`navbar-group navbar-item ${
+                activeSportsNav ? "active" : ""
+              }`}
+            >
+              <span
+                onClick={() => {
+                  setActiveSportsNav(a => !a);
+                }}
+              >
+                Sports
+              </span>
+              <div className="navbar-group-links">
+                <Link to="/sports" className="navbar-item">
+                  RSP Info
+                </Link>
+                {subNav.sports.map((link, index) => {
+                  return (
+                    <Link
+                      to={link.slug}
+                      key={"posts-subnav-link-" + index}
+                      className="navbar-item"
+                    >
+                      {link.title}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
             <Link className="navbar-item" to="/events">
               Events
             </Link>

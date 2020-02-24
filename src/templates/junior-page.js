@@ -1,17 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { kebabCase } from "lodash";
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
+
 import Layout from "../components/Layout";
+import Hero from "../components/Hero";
 import Content, { HTMLContent } from "../components/Content";
 
 export const JuniorPageTemplate = ({
+  image,
   content,
   contentComponent,
   description,
-  files,
-  tags,
+  filesList,
   title,
   helmet
 }) => {
@@ -20,6 +21,7 @@ export const JuniorPageTemplate = ({
   return (
     <section className="section">
       {helmet || ""}
+      <Hero {...{ image, title }} />
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
@@ -28,28 +30,31 @@ export const JuniorPageTemplate = ({
             </h1>
             <p>{description}</p>
             <ul>
-              {files &&
-                files.map(file => {
+              {filesList &&
+                filesList.map(files => {
                   return (
-                    <li key={file.text}>
-                      <Link to={file.file.absolutePath}>{file.text}</Link>
-                    </li>
+                    <div key={files.text}>
+                      <li>
+                        <b>
+                          <p>{files.text}</p>
+                        </b>
+                      </li>
+                      <ul>
+                        {files["files"].map(file => {
+                          return (
+                            <li key={file.text}>
+                              <Link to={file.file.absolutePath}>
+                                {file.text}
+                              </Link>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </div>
                   );
                 })}
             </ul>
             <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
           </div>
         </div>
       </div>
@@ -71,11 +76,12 @@ const JuniorPage = ({ data }) => {
   return (
     <Layout>
       <JuniorPageTemplate
+        image={post.image}
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         frontImage={post.frontmatter.frontImage}
-        files={post.frontmatter.files}
+        filesList={post.frontmatter.filesList}
         helmet={
           <Helmet titleTemplate="%s | Junior">
             <title>{`${post.frontmatter.title}`}</title>
@@ -85,7 +91,6 @@ const JuniorPage = ({ data }) => {
             />
           </Helmet>
         }
-        tags={post.frontmatter.tags}
         title={post.frontmatter.title}
       />
     </Layout>
@@ -106,16 +111,23 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         title
-        description
-        files {
-          text
-          file {
-            absolutePath
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
           }
         }
-        tags
+        filesList {
+          text
+          files {
+            text
+            file {
+              absolutePath
+            }
+          }
+        }
       }
     }
   }
