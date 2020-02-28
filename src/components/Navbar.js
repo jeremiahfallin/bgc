@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
+
 import logo from "../img/BoysandGirlsLogoHorizontal.png";
 
 const Navbar = () => {
@@ -38,7 +39,8 @@ const Navbar = () => {
     { slug: "/junior", title: "Junior Club" }
   ];
   subNav.about = [
-    { slug: "/about", title: "Us" },
+    { slug: "/about/safety", title: "Child Safety" },
+    { slug: "/about", title: "Who We Are" },
     { slug: "/forms", title: "Club Forms" }
   ];
   subNav.sports = [];
@@ -86,25 +88,26 @@ const Navbar = () => {
               }`}
             >
               <span
+                className={`navbar-group-parent`}
                 onClick={() => {
                   setActiveAboutNav(a => !a);
                 }}
               >
                 About
+                <div className="navbar-group-links">
+                  {subNav.about.map((link, index) => {
+                    return (
+                      <Link
+                        to={link.slug}
+                        key={"posts-subnav-link-" + index}
+                        className="navbar-item"
+                      >
+                        {link.title}
+                      </Link>
+                    );
+                  })}
+                </div>
               </span>
-              <div className="navbar-group-links">
-                {subNav.about.map((link, index) => {
-                  return (
-                    <Link
-                      to={link.slug}
-                      key={"posts-subnav-link-" + index}
-                      className="navbar-item"
-                    >
-                      {link.title}
-                    </Link>
-                  );
-                })}
-              </div>
             </div>
             <Link className="navbar-item" to="/involvement">
               Get Involved
@@ -115,6 +118,7 @@ const Navbar = () => {
               }`}
             >
               <span
+                className={`navbar-group-parent`}
                 onClick={() => {
                   setActiveProgramsNav(a => !a);
                 }}
@@ -144,6 +148,7 @@ const Navbar = () => {
               }`}
             >
               <span
+                className={`navbar-group-parent`}
                 onClick={() => {
                   setActiveSportsNav(a => !a);
                 }}
@@ -172,6 +177,17 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="navbar-end has-text-centered">
+            <div className="navbar-item">
+              <span className="icon is-small" style={{ marginRight: 4 }}>
+                <a href={`mailto:contact@bgcuv.org`}>
+                  <i
+                    className="fas fa-envelope-square"
+                    data-fa-transform="flip-h"
+                    aria-hidden="true"
+                  />
+                </a>
+              </span>
+            </div>
             <div className="navbar-item">
               <span className="icon is-small" style={{ marginRight: 4 }}>
                 <i

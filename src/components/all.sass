@@ -164,6 +164,27 @@ footer.footer
 .navbar-span:hover
   color: $primary
 
+.navbar-group-parent
+  padding-right: 1rem
+
+.navbar-group-parent::after
+  content: ''
+  position: absolute
+  top: calc(50%)
+  right: .5rem
+  border-bottom: 2px solid $black-ter
+  border-right: 2px solid $black-ter
+  display: block
+  height: 0.5rem
+  width: 0.5rem
+  transition: 0.3s ease all
+  transform: translateY(-50%) rotate(45deg)
+
+.navbar-group.active .navbar-group-parent::after
+  top: calc(50% + 0.2rem)
+  transform: translateY(-50%) rotate(-135deg)
+
+
 
 // TOC
 .content.toc
@@ -221,9 +242,11 @@ $menu-label-color: $white-ter
   .blog-list-item .featured-thumbnail
     flex-basis: 50%
 
-    +mobile
-  .blog-list-item header
-    display: block
+  +mobile
+  .blog-list-item
+    position: static
+  .navbar-group-links
+    position: block
   .blog-list-item .featured-thumbnail
     text-align: center
     max-width: 70%

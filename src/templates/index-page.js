@@ -20,7 +20,6 @@ export const IndexPageTemplate = ({
 }) => (
   <div>
     <Hero {...{ image, title, subheading }} />
-    <DonationHero />
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
