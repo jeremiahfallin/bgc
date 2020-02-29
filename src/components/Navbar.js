@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
 
 import logo from "../img/BoysandGirlsLogoHorizontal.png";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
-  const [activeAboutNav, setActiveAboutNav] = useState(false);
-  const [activeProgramsNav, setActiveProgramsNav] = useState(false);
-  const [activeSportsNav, setActiveSportsNav] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState("");
 
   const {
     allMarkdownRemark: { edges: posts }
@@ -84,13 +82,13 @@ const Navbar = () => {
           <div className="navbar-start has-text-centered">
             <div
               className={`navbar-group navbar-item ${
-                activeAboutNav ? "active" : ""
+                activeDropdown === "about" ? "active" : ""
               }`}
             >
               <span
                 className={`navbar-group-parent`}
                 onClick={() => {
-                  setActiveAboutNav(a => !a);
+                  setActiveDropdown(a => (a === "about" ? "" : "about"));
                 }}
               >
                 About
@@ -114,13 +112,13 @@ const Navbar = () => {
             </Link>
             <div
               className={`navbar-group navbar-item ${
-                activeProgramsNav ? "active" : ""
+                activeDropdown === "programs" ? "active" : ""
               }`}
             >
               <span
                 className={`navbar-group-parent`}
                 onClick={() => {
-                  setActiveProgramsNav(a => !a);
+                  setActiveDropdown(a => (a === "programs" ? "" : "programs"));
                 }}
               >
                 Programs
@@ -144,13 +142,13 @@ const Navbar = () => {
             </div>
             <div
               className={`navbar-group navbar-item ${
-                activeSportsNav ? "active" : ""
+                activeDropdown === "sports" ? "active" : ""
               }`}
             >
               <span
                 className={`navbar-group-parent`}
                 onClick={() => {
-                  setActiveSportsNav(a => !a);
+                  setActiveDropdown(a => (a === "sports" ? "" : "sports"));
                 }}
               >
                 Sports
