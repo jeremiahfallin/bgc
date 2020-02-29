@@ -38,7 +38,7 @@ export const BoardPostTemplate = ({ filesList, title, helmet }) => {
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            {hydrate(secret())}
+            {/* {hydrate(secret())} */}
             <ul>
               {filesList &&
                 filesList.map(files => {
