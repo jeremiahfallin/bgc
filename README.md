@@ -22,7 +22,7 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 - Netlify deploy configuration
 - Netlify function support, see `lambda` folder
 - Perfect score on Lighthouse for SEO, Accessibility and Performance (wip:PWA)
-- ..and more
+- ...and more
 
 ## Prerequisites
 
