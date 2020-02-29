@@ -2,7 +2,7 @@
 templateKey: about-page
 title: Who We Are
 image: /img/img_8685.jpg
-heading: This is BGCUV
+heading: This is the BGCUV
 ---
 
 # Our Staff
