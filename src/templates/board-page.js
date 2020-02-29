@@ -6,27 +6,27 @@ import { graphql, Link } from "gatsby";
 
 import Layout from "../components/Layout";
 
-const secret = (event, context, callback) => {
-  const { identity, user } = context.clientContext;
-  if (user.app_metadata.roles != "visitor") {
-    // Call a secret function to hydrate your application with secret data only logged in users can see
-    return callback(null, {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: "hello there, this is some super secret data"
-      })
-    });
-  } else {
-    //data is secret//
-    return callback(null, {
-      statusCode: 200,
-      body: JSON.stringify({
-        message:
-          "hello there, sorry but this data is secret and requires log in"
-      })
-    });
-  }
-};
+// const secret = (event, context, callback) => {
+//   const { identity, user } = context.clientContext;
+//   if (user.app_metadata.roles != "visitor") {
+//     // Call a secret function to hydrate your application with secret data only logged in users can see
+//     return callback(null, {
+//       statusCode: 200,
+//       body: JSON.stringify({
+//         message: "hello there, this is some super secret data"
+//       })
+//     });
+//   } else {
+//     //data is secret//
+//     return callback(null, {
+//       statusCode: 200,
+//       body: JSON.stringify({
+//         message:
+//           "hello there, sorry but this data is secret and requires log in"
+//       })
+//     });
+//   }
+// };
 
 export const BoardPostTemplate = ({ filesList, title, helmet }) => {
   return (
