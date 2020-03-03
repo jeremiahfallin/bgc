@@ -32,10 +32,10 @@ intro:
         everyone in the group feels important. 66% of teen members surveyed have
         helped out at the Club within the last year.
   heading: What we offer
-  description: '???'
+  description: "???"
 main:
   heading: Great coffee with no compromises
-  description: '??'
+  description: "??"
   image1:
     alt: A close-up of a paper filter filled with ground coffee
     image: /img/products-grid3.jpg
@@ -46,4 +46,3 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 ---
-
