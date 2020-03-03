@@ -7,7 +7,7 @@ import Hero from "../components/Hero";
 import Features from "../components/Features";
 import EventsRoll from "../components/EventsRoll";
 import SportsPostsRoll from "../components/SportsPostsRoll";
-import DonationHero from "../components/DonationHero";
+// import DonationHero from "../components/DonationHero";
 
 export const IndexPageTemplate = ({
   image,
@@ -28,7 +28,9 @@ export const IndexPageTemplate = ({
               <div className="content">
                 <div className="content">
                   <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
+                    <h1 className="title has-text-weight-semibold is-size-2">
+                      {mainpitch.title}
+                    </h1>
                   </div>
                   <div className="tile">
                     <h3 className="subtitle">{mainpitch.description}</h3>
