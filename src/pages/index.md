@@ -8,7 +8,7 @@ mainpitch:
   title: Mission
   description: >
     To inspire all young people, especially those who need us most,  to reach
-    their full potential as productive, caring, and responsible citizens. 
+    their full potential as productive, caring, and responsible citizens.
 description: >-
   The Boys & Girls Club of the Umpqua Valley is a non-profit  organization
   serving more than 1500 local youth entering 1st grade  through 12th grade
@@ -26,10 +26,10 @@ intro:
     - image: /img/IMG_4648 - Blurb.jpg
       text: Our gym.
   heading: What we offer
-  description: '???'
+  description: "???"
 main:
   heading: Great coffee with no compromises
-  description: '??'
+  description: "??"
   image1:
     alt: A close-up of a paper filter filled with ground coffee
     image: /img/products-grid3.jpg
@@ -40,4 +40,3 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 ---
-
