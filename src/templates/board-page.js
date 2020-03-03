@@ -1,5 +1,5 @@
 import React from "react";
-import { hydrate } from "react-dom";
+// import { hydrate } from "react-dom";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";

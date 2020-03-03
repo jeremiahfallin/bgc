@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+
+import RadialChart from "./RadialChart";
 
 const FeatureGrid = ({ gridItems }) => (
   <div className="columns is-multiline">
     {gridItems.map(item => (
-      <div key={item.text} className="column is-6">
+      <div key={item.text} className="column is-4">
         <section className="section">
           <div className="has-text-centered">
             <div
@@ -14,7 +15,11 @@ const FeatureGrid = ({ gridItems }) => (
                 display: "inline-block"
               }}
             >
-              <PreviewCompatibleImage imageInfo={item} />
+              <RadialChart
+                percent={`${0.4}`}
+                color={`${"#0ff0f0"}`}
+                image={`${item.image.childImageSharp.fluid.src}`}
+              />
             </div>
           </div>
           <p>{item.text}</p>
