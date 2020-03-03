@@ -18,18 +18,24 @@ description: >-
 intro:
   blurbs:
     - image: /img/IMG_4648.jpg
-      text: Check out our Club calendar.
+      text: >-
+        99% of our 5th-12th grade members surveyed say they are on grade level.
+        94% of our 5th-12th grade members surveyed received C’s or better
+        grades.
     - image: /img/IMG_0689.jpg
-      text: This is Summer Camps.
+      text: >-
+        100% of our teen members surveyed abstained from cigarette use. 74% of
+        our total members surveyed eat at least three vegetable servings a day.
     - image: /img/IMG_4678.jpg
-      text: Technology for all.
-    - image: /img/IMG_4648 - Blurb.jpg
-      text: Our gym.
+      text: >-
+        91% of all members surveyed say when they lead a group, they make sure
+        everyone in the group feels important. 66% of teen members surveyed have
+        helped out at the Club within the last year.
   heading: What we offer
-  description: "???"
+  description: '???'
 main:
   heading: Great coffee with no compromises
-  description: "??"
+  description: '??'
   image1:
     alt: A close-up of a paper filter filled with ground coffee
     image: /img/products-grid3.jpg
@@ -40,3 +46,4 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 ---
+
