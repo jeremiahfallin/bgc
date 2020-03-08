@@ -10,11 +10,13 @@ export const BoardPostTemplate = ({ filesList, title, helmet }) => {
   const [user, setUser] = useState(netlifyIdentity.currentUser());
 
   const login = () => {
+    console.log("try to log on?");
     netlifyIdentity.open();
     netlifyIdentity.on("login", user => setUser(user));
   };
 
   const logout = () => {
+    console.log("try to log out?");
     netlifyIdentity.logout();
     netlifyIdentity.on("logout", user => setUser(user));
   };
