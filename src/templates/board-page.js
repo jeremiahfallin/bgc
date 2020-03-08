@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
+import netlifyIdentity from "netlify-identity-widget";
 
 import Layout from "../components/Layout";
 
 export const BoardPostTemplate = ({ filesList, title, helmet }) => {
-  console.log("am i here?");
+  const [user, setUser] = useState(netlifyIdentity.currentUser());
+
+  const login = () => {
+    netlifyIdentity.open();
+    netlifyIdentity.on("login", user => setUser(user));
+  };
+
+  const logout = () => {
+    netlifyIdentity.logout();
+    netlifyIdentity.on("logout", user => setUser(user));
+  };
+
   return (
     <section className="section">
       {helmet || ""}
@@ -16,8 +28,19 @@ export const BoardPostTemplate = ({ filesList, title, helmet }) => {
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
+            {user ? (
+              <button className="button is-primary" onClick={e => logout()}>
+                Log out
+              </button>
+            ) : (
+              <button className="button is-primary" onClick={e => login()}>
+                Log in
+              </button>
+            )}
             <ul>
-              {filesList &&
+              {user &&
+                user.email &&
+                filesList &&
                 filesList.map(files => {
                   return (
                     <div key={files.text}>
