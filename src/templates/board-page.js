@@ -10,6 +10,7 @@ export const BoardPostTemplate = ({ filesList, title, helmet }) => {
   const [user, setUser] = useState(netlifyIdentity.currentUser());
   useEffect(() => {
     netlifyIdentity.init();
+    netlifyIdentity.on("init", user => setUser(user));
   }, []);
 
   const login = () => {
