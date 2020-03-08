@@ -80,6 +80,7 @@ const BoardPost = ({ data }) => {
   const {
     markdownRemark: { frontmatter: post }
   } = data;
+  console.log(data);
 
   return (
     <Layout>
@@ -115,6 +116,8 @@ export const pageQuery = graphql`
             text
             file {
               absolutePath
+              relativePath
+              dir
             }
           }
         }
