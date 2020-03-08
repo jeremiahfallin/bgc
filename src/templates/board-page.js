@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
@@ -8,6 +8,9 @@ import Layout from "../components/Layout";
 
 export const BoardPostTemplate = ({ filesList, title, helmet }) => {
   const [user, setUser] = useState(netlifyIdentity.currentUser());
+  useEffect(() => {
+    netlifyIdentity.init();
+  }, []);
 
   const login = () => {
     console.log("try to log on?");
