@@ -1,34 +1,12 @@
 import React from "react";
-// import { hydrate } from "react-dom";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 
 import Layout from "../components/Layout";
 
-// const secret = (event, context, callback) => {
-//   const { identity, user } = context.clientContext;
-//   if (user.app_metadata.roles != "visitor") {
-//     // Call a secret function to hydrate your application with secret data only logged in users can see
-//     return callback(null, {
-//       statusCode: 200,
-//       body: JSON.stringify({
-//         message: "hello there, this is some super secret data"
-//       })
-//     });
-//   } else {
-//     //data is secret//
-//     return callback(null, {
-//       statusCode: 200,
-//       body: JSON.stringify({
-//         message:
-//           "hello there, sorry but this data is secret and requires log in"
-//       })
-//     });
-//   }
-// };
-
 export const BoardPostTemplate = ({ filesList, title, helmet }) => {
+  console.log("am i here?");
   return (
     <section className="section">
       {helmet || ""}
@@ -38,7 +16,6 @@ export const BoardPostTemplate = ({ filesList, title, helmet }) => {
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            {/* {hydrate(secret())} */}
             <ul>
               {filesList &&
                 filesList.map(files => {
@@ -53,7 +30,8 @@ export const BoardPostTemplate = ({ filesList, title, helmet }) => {
                         {files["files"].map(file => {
                           return (
                             <li key={file.text}>
-                              <Link to={file.file.absolutePath}>
+                              {console.log(file.file.relativePath)}
+                              <Link to={`img/${file.file.relativePath}`}>
                                 {file.text}
                               </Link>
                             </li>
@@ -115,9 +93,7 @@ export const pageQuery = graphql`
           files {
             text
             file {
-              absolutePath
               relativePath
-              dir
             }
           }
         }
