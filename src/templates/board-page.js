@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import netlifyIdentity from "netlify-identity-widget";
 
 import Layout from "../components/Layout";
@@ -63,9 +63,7 @@ export const BoardPostTemplate = ({ filesList, title, helmet, url }) => {
                             <li key={file.text}>
                               <a
                                 download
-                                href={`https://confident-payne.netlify.com/img/${
-                                  file.file.relativePath
-                                }`}
+                                href={`${url}/img/${file.file.relativePath}`}
                               >
                                 {file.text}
                               </a>
