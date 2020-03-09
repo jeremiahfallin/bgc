@@ -63,9 +63,9 @@ export const BoardPostTemplate = ({ filesList, title, helmet }) => {
                           return (
                             <li key={file.text}>
                               {console.log(file.file.relativePath)}
-                              <Link to={`img/${file.file.relativePath}`}>
+                              <a href={`img/${file.file.relativePath}`}>
                                 {file.text}
-                              </Link>
+                              </a>
                             </li>
                           );
                         })}
