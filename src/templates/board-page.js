@@ -61,12 +61,14 @@ export const BoardPostTemplate = ({ filesList, title, helmet, url }) => {
                         {files["files"].map(file => {
                           return (
                             <li key={file.text}>
-                              <Link
+                              <a
                                 download
-                                to={`img/${file.file.relativePath}`}
+                                href={`https://confident-payne.netlify.com/img/${
+                                  file.file.relativePath
+                                }`}
                               >
                                 {file.text}
-                              </Link>
+                              </a>
                             </li>
                           );
                         })}
