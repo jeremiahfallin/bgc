@@ -64,7 +64,7 @@ export const BoardPostTemplate = ({ filesList, title, helmet, url }) => {
                             <li key={file.text}>
                               <iframe
                                 title={file.text}
-                                src={`${url}img/${file.file.relativePath}`}
+                                src={`${url}/img/${file.file.relativePath}`}
                                 width="100%"
                                 height="500px"
                               />
