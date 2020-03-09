@@ -5,7 +5,6 @@ import logo from "../img/BoysandGirlsLogoHorizontal.png";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState("");
 
   const {
     allMarkdownRemark: { edges: posts }
@@ -78,61 +77,20 @@ const Navbar = () => {
         <div
           id="navMenu"
           className={`navbar-menu ${active ? "is-active" : ""}`}
+          aria-label="dropdown navigation"
         >
           <div className="navbar-start has-text-centered">
-            <div
-              className={`navbar-group navbar-item ${
-                activeDropdown === "about" ? "active" : ""
-              }`}
-            >
-              <span
-                className={`navbar-group-parent`}
-                onClick={() => {
-                  setActiveDropdown(a => (a === "about" ? "" : "about"));
-                }}
-              >
+            <div className={`navbar-item has-dropdown is-hoverable`}>
+              <Link to="/about" className={`navbar-link`}>
                 About
-                <div className="navbar-group-links">
-                  {subNav.about.map((link, index) => {
-                    return (
-                      <Link
-                        to={link.slug}
-                        key={"posts-subnav-link-" + index}
-                        className="navbar-item"
-                      >
-                        {link.title}
-                      </Link>
-                    );
-                  })}
-                </div>
-              </span>
-            </div>
-            <Link className="navbar-item" to="/involvement">
-              Get Involved
-            </Link>
-            <div
-              className={`navbar-group navbar-item ${
-                activeDropdown === "programs" ? "active" : ""
-              }`}
-            >
-              <span
-                className={`navbar-group-parent`}
-                onClick={() => {
-                  setActiveDropdown(a => (a === "programs" ? "" : "programs"));
-                }}
-              >
-                Programs
-              </span>
-              <div className="navbar-group-links">
-                <Link to="/programs" className="navbar-item">
-                  Programs Overview
-                </Link>
-                {subNav.programs.map((link, index) => {
+              </Link>
+              <div className="navbar-dropdown">
+                {subNav.about.map((link, index) => {
                   return (
                     <Link
                       to={link.slug}
                       key={"posts-subnav-link-" + index}
-                      className="navbar-item"
+                      className={`navbar-item`}
                     >
                       {link.title}
                     </Link>
@@ -140,20 +98,32 @@ const Navbar = () => {
                 })}
               </div>
             </div>
-            <div
-              className={`navbar-group navbar-item ${
-                activeDropdown === "sports" ? "active" : ""
-              }`}
-            >
-              <span
-                className={`navbar-group-parent`}
-                onClick={() => {
-                  setActiveDropdown(a => (a === "sports" ? "" : "sports"));
-                }}
-              >
+            <Link className="navbar-item" to="/involvement">
+              Get Involved
+            </Link>
+            <div className={`navbar-item has-dropdown is-hoverable`}>
+              <Link to="/programs" className={`navbar-link`}>
+                Programs
+              </Link>
+              <div className="navbar-dropdown">
+                {subNav.programs.map((link, index) => {
+                  return (
+                    <Link
+                      to={link.slug}
+                      key={"posts-subnav-link-" + index}
+                      className={`navbar-item`}
+                    >
+                      {link.title}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+            <div className={`navbar-item has-dropdown is-hoverable`}>
+              <Link to="/sports" className={`navbar-link`}>
                 Sports
-              </span>
-              <div className="navbar-group-links">
+              </Link>
+              <div className="navbar-dropdown">
                 <Link to="/sports" className="navbar-item">
                   RSP Info
                 </Link>
@@ -162,7 +132,7 @@ const Navbar = () => {
                     <Link
                       to={link.slug}
                       key={"posts-subnav-link-" + index}
-                      className="navbar-item"
+                      className={`navbar-item`}
                     >
                       {link.title}
                     </Link>
