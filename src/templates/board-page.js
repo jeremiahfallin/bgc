@@ -14,13 +14,13 @@ export const BoardPostTemplate = ({ filesList, title, helmet }) => {
   }, []);
 
   const login = () => {
-    console.log("try to log on?");
+    console.log(user);
     netlifyIdentity.open();
     netlifyIdentity.on("login", user => setUser(user));
   };
 
   const logout = () => {
-    console.log("try to log out?");
+    console.log(user);
     netlifyIdentity.logout();
     netlifyIdentity.on("logout", user => setUser(user));
   };
