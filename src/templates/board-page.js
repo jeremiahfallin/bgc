@@ -13,7 +13,6 @@ export const BoardPostTemplate = ({ filesList, title, helmet, url }) => {
   }, []);
 
   netlifyIdentity.on("init", user => {
-    console.log(user);
     setUser(user);
   });
 
@@ -63,7 +62,7 @@ export const BoardPostTemplate = ({ filesList, title, helmet, url }) => {
                         {files["files"].map(file => {
                           return (
                             <li key={file.text}>
-                              <Link to={`${url}/img/${file.file.relativePath}`}>
+                              <Link to={`$img/${file.file.relativePath}`}>
                                 {file.text}
                               </Link>
                             </li>
