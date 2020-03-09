@@ -62,13 +62,11 @@ export const BoardPostTemplate = ({ filesList, title, helmet, url }) => {
                         {files["files"].map(file => {
                           return (
                             <li key={file.text}>
-                              <iframe
-                                title={file.text}
+                              <Link
                                 src={`${url}/img/${file.file.relativePath}`}
-                                width="100%"
-                                height="500px"
-                              />
-                              {file.text}
+                              >
+                                {file.text}
+                              </Link>
                             </li>
                           );
                         })}
