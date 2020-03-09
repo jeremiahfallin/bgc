@@ -6,7 +6,7 @@ import netlifyIdentity from "netlify-identity-widget";
 
 import Layout from "../components/Layout";
 
-export const BoardPostTemplate = ({ filesList, title, helmet }) => {
+export const BoardPostTemplate = ({ filesList, title, helmet, url }) => {
   const [user, setUser] = useState(netlifyIdentity.currentUser());
   useEffect(() => {
     netlifyIdentity.init();
@@ -62,10 +62,13 @@ export const BoardPostTemplate = ({ filesList, title, helmet }) => {
                         {files["files"].map(file => {
                           return (
                             <li key={file.text}>
-                              {console.log(file.file.relativePath)}
-                              <a href={`img/${file.file.relativePath}`}>
-                                {file.text}
-                              </a>
+                              <iframe
+                                title={file.text}
+                                src={`${url}img/${file.file.relativePath}`}
+                                width="100%"
+                                height="500px"
+                              />
+                              {file.text}
                             </li>
                           );
                         })}
@@ -102,6 +105,7 @@ const BoardPost = ({ data }) => {
           </Helmet>
         }
         title={post.title}
+        url={data.site.siteMetadata.siteUrl}
       />
     </Layout>
   );
@@ -129,6 +133,12 @@ export const pageQuery = graphql`
             }
           }
         }
+      }
+    }
+    site {
+      id
+      siteMetadata {
+        siteUrl
       }
     }
   }

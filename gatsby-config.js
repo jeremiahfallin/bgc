@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: "Boys & Girls Club of the Umpqua Valley",
     description:
-      "This is the main website of the Boys & Girls Club located in Roseburg Oregon."
+      "This is the main website of the Boys & Girls Club located in Roseburg Oregon.",
+    siteUrl: "https://confident-payne.netlify.com/"
   },
   plugins: [
     "gatsby-plugin-react-helmet",
