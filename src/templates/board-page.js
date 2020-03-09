@@ -10,11 +10,12 @@ export const BoardPostTemplate = ({ filesList, title, helmet, url }) => {
   const [user, setUser] = useState(netlifyIdentity.currentUser());
   useEffect(() => {
     netlifyIdentity.init();
-    netlifyIdentity.on("init", user => {
-      console.log(user);
-      setUser(user);
-    });
   }, []);
+
+  netlifyIdentity.on("init", user => {
+    console.log(user);
+    setUser(user);
+  });
 
   const login = () => {
     console.log(user);
@@ -62,9 +63,7 @@ export const BoardPostTemplate = ({ filesList, title, helmet, url }) => {
                         {files["files"].map(file => {
                           return (
                             <li key={file.text}>
-                              <Link
-                                src={`${url}/img/${file.file.relativePath}`}
-                              >
+                              <Link to={`${url}/img/${file.file.relativePath}`}>
                                 {file.text}
                               </Link>
                             </li>
