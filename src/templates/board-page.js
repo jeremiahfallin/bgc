@@ -17,13 +17,11 @@ export const BoardPostTemplate = ({ filesList, title, helmet, url }) => {
   });
 
   const login = () => {
-    console.log(user);
     netlifyIdentity.open();
     netlifyIdentity.on("login", user => setUser(user));
   };
 
   const logout = () => {
-    console.log(user);
     netlifyIdentity.logout();
     netlifyIdentity.on("logout", user => setUser(user));
   };
@@ -62,7 +60,7 @@ export const BoardPostTemplate = ({ filesList, title, helmet, url }) => {
                         {files["files"].map(file => {
                           return (
                             <li key={file.text}>
-                              <Link to={`$img/${file.file.relativePath}`}>
+                              <Link to={`img/${file.file.relativePath}`}>
                                 {file.text}
                               </Link>
                             </li>
@@ -89,7 +87,6 @@ const BoardPost = ({ data }) => {
   const {
     markdownRemark: { frontmatter: post }
   } = data;
-  console.log(data);
 
   return (
     <Layout>
