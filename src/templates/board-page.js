@@ -60,7 +60,10 @@ export const BoardPostTemplate = ({ filesList, title, helmet, url }) => {
                         {files["files"].map(file => {
                           return (
                             <li key={file.text}>
-                              <Link to={`img/${file.file.relativePath}`}>
+                              <Link
+                                target="_blank"
+                                to={`img/${file.file.relativePath}`}
+                              >
                                 {file.text}
                               </Link>
                             </li>
