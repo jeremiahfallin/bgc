@@ -29,6 +29,7 @@ export const BoardPostTemplate = ({ filesList, title, helmet, url }) => {
   return (
     <section className="section">
       {helmet || ""}
+      {console.log(filesList)}
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
@@ -61,7 +62,7 @@ export const BoardPostTemplate = ({ filesList, title, helmet, url }) => {
                           return (
                             <li key={file.text}>
                               <Link
-                                target="_blank"
+                                download
                                 to={`img/${file.file.relativePath}`}
                               >
                                 {file.text}
