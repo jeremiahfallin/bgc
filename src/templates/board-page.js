@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { graphql, withPrefix } from "gatsby";
@@ -6,11 +6,8 @@ import netlifyIdentity from "netlify-identity-widget";
 
 import Layout from "../components/Layout";
 
-export const BoardPostTemplate = ({ filesList, title, helmet, url }) => {
+export const BoardPostTemplate = ({ filesList, title, helmet }) => {
   const [user, setUser] = useState(netlifyIdentity.currentUser());
-  useEffect(() => {
-    netlifyIdentity.init();
-  }, []);
 
   netlifyIdentity.on("init", user => {
     setUser(user);
@@ -132,12 +129,6 @@ export const pageQuery = graphql`
             }
           }
         }
-      }
-    }
-    site {
-      id
-      siteMetadata {
-        siteUrl
       }
     }
   }
