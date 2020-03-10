@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
+import netlifyIdentity from "netlify-identity-widget";
 
 import logo from "../img/BoysandGirlsLogoHorizontal.png";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    netlifyIdentity.init();
+  }, []);
 
   const {
     allMarkdownRemark: { edges: posts }
