@@ -101,7 +101,6 @@ const BoardPost = ({ data }) => {
           </Helmet>
         }
         title={post.title}
-        url={data.site.siteMetadata.siteUrl}
       />
     </Layout>
   );
