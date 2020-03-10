@@ -60,6 +60,11 @@ const Footer = class extends React.Component {
                         Admin
                       </a>
                     </li>
+                    <li>
+                      <Link className="navbar-item" to={`/board`}>
+                        Board
+                      </Link>
+                    </li>
                   </ul>
                 </section>
               </div>

@@ -57,6 +57,7 @@ $navbar-item-img-max-height: 100%
 $footer-background-color: #53565a
 $footer-color: $black-ter
 $box-radius: 100px
+$navbar-dropdown-item-hover-color: $primary
 
 .navbar .navbar-menu
   box-shadow: none !important
@@ -137,55 +138,19 @@ footer.footer
     background-color: transparent
 
 
-.navbar-group
-  cursor: pointer
-
-.navbar-group-links
-  position: absolute
-  top: 100%
-  left: 0
-  width: auto
-  background: white
-  max-height: 0
-  overflow: hidden
-  transition: 0.2s ease all
-
-
 .navbar-item:hover,
 .navbar-item.active,
 .navbar-item:focus 
-  color: $primary
+  color: $primary-invert
   border-bottom-color: currentColor
+  background-color: darken($white-ter, 5%)
 
-.navbar-group.active .navbar-group-links
-  max-height: 100vh
-  opacity: 1
-  transition: 0.2s ease all
-
-.navbar-span:hover
-  color: $primary
-
-.navbar-group-parent
-  padding-right: 1rem
-
-.navbar-group-parent::after
-  content: ''
-  position: absolute
-  top: calc(50%)
-  right: .5rem
-  border-bottom: 2px solid $black-ter
-  border-right: 2px solid $black-ter
-  display: block
-  height: 0.5rem
-  width: 0.5rem
-  transition: 0.3s ease all
-  transform: translateY(-50%) rotate(45deg)
-
-.navbar-group.active .navbar-group-parent::after
-  top: calc(50% + 0.2rem)
-  transform: translateY(-50%) rotate(-135deg)
-
-
+.navbar-link
+  &:focus,
+  &:hover,
+  &.is-active
+    background-color: darken($white-ter, 5%)
+    color: $primary-invert
 
 // TOC
 .content.toc

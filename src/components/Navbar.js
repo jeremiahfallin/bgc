@@ -30,7 +30,7 @@ const Navbar = () => {
     `
   );
 
-  let subNav = {};
+  const subNav = {};
   subNav.programs = [
     { slug: "/summer", title: "Summer Programs" },
     { slug: "/junior", title: "Junior Club" }
@@ -87,20 +87,23 @@ const Navbar = () => {
               <div className="navbar-dropdown">
                 {subNav.about.map((link, index) => {
                   return (
-                    <Link
-                      to={link.slug}
-                      key={"posts-subnav-link-" + index}
+                    <div
                       className={`navbar-item`}
+                      key={"posts-subnav-link-" + index}
                     >
-                      {link.title}
-                    </Link>
+                      <Link to={link.slug} className={`navbar-item`}>
+                        {link.title}
+                      </Link>
+                    </div>
                   );
                 })}
               </div>
             </div>
-            <Link className="navbar-item" to="/involvement">
-              Get Involved
-            </Link>
+            <div className={`navbar-item is-paddingless`}>
+              <Link className="navbar-item" to="/involvement">
+                Get Involved
+              </Link>
+            </div>
             <div className={`navbar-item has-dropdown is-hoverable`}>
               <Link to="/programs" className={`navbar-link`}>
                 Programs
@@ -108,13 +111,14 @@ const Navbar = () => {
               <div className="navbar-dropdown">
                 {subNav.programs.map((link, index) => {
                   return (
-                    <Link
-                      to={link.slug}
-                      key={"posts-subnav-link-" + index}
+                    <div
                       className={`navbar-item`}
+                      key={"posts-subnav-link-" + index}
                     >
-                      {link.title}
-                    </Link>
+                      <Link to={link.slug} className={`navbar-item`}>
+                        {link.title}
+                      </Link>
+                    </div>
                   );
                 })}
               </div>
@@ -129,20 +133,23 @@ const Navbar = () => {
                 </Link>
                 {subNav.sports.map((link, index) => {
                   return (
-                    <Link
-                      to={link.slug}
-                      key={"posts-subnav-link-" + index}
+                    <div
                       className={`navbar-item`}
+                      key={"posts-subnav-link-" + index}
                     >
-                      {link.title}
-                    </Link>
+                      <Link to={link.slug} className={`navbar-item`}>
+                        {link.title}
+                      </Link>
+                    </div>
                   );
                 })}
               </div>
             </div>
-            <Link className="navbar-item" to="/events">
-              Events
-            </Link>
+            <div className={`navbar-item is-paddingless`}>
+              <Link className="navbar-item" to="/events">
+                Events
+              </Link>
+            </div>
           </div>
           <div className="navbar-end has-text-centered">
             <div className="navbar-item">
