@@ -92,23 +92,20 @@ const Navbar = () => {
               <div className="navbar-dropdown">
                 {subNav.about.map((link, index) => {
                   return (
-                    <div
+                    <Link
+                      to={link.slug}
                       className={`navbar-item`}
                       key={"posts-subnav-link-" + index}
                     >
-                      <Link to={link.slug} className={`navbar-item`}>
-                        {link.title}
-                      </Link>
-                    </div>
+                      {link.title}
+                    </Link>
                   );
                 })}
               </div>
             </div>
-            <div className={`navbar-item is-paddingless`}>
-              <Link className="navbar-item" to="/involvement">
-                Get Involved
-              </Link>
-            </div>
+            <Link className="navbar-item" to="/involvement">
+              Get Involved
+            </Link>
             <div className={`navbar-item has-dropdown is-hoverable`}>
               <Link to="/programs" className={`navbar-link`}>
                 Programs
@@ -116,14 +113,13 @@ const Navbar = () => {
               <div className="navbar-dropdown">
                 {subNav.programs.map((link, index) => {
                   return (
-                    <div
+                    <Link
+                      to={link.slug}
                       className={`navbar-item`}
                       key={"posts-subnav-link-" + index}
                     >
-                      <Link to={link.slug} className={`navbar-item`}>
-                        {link.title}
-                      </Link>
-                    </div>
+                      {link.title}
+                    </Link>
                   );
                 })}
               </div>
@@ -133,43 +129,27 @@ const Navbar = () => {
                 Sports
               </Link>
               <div className="navbar-dropdown">
-                <div className={`navbar-item`}>
-                  <Link to="/sports" className="navbar-item">
-                    RSP Info
-                  </Link>
-                </div>
+                <Link to="/sports" className="navbar-item">
+                  RSP Info
+                </Link>
                 {subNav.sports.map((link, index) => {
                   return (
-                    <div
+                    <Link
+                      to={link.slug}
                       className={`navbar-item`}
                       key={"posts-subnav-link-" + index}
                     >
-                      <Link to={link.slug} className={`navbar-item`}>
-                        {link.title}
-                      </Link>
-                    </div>
+                      {link.title}
+                    </Link>
                   );
                 })}
               </div>
             </div>
-            <div className={`navbar-item is-paddingless`}>
-              <Link className="navbar-item" to="/events">
-                Events
-              </Link>
-            </div>
+            <Link className="navbar-item" to="/events">
+              Events
+            </Link>
           </div>
           <div className="navbar-end has-text-centered">
-            <div className="navbar-item">
-              <span className="icon is-small" style={{ marginRight: 4 }}>
-                <a href={`mailto:contact@bgcuv.org`}>
-                  <i
-                    className="fas fa-envelope-square"
-                    data-fa-transform="flip-h"
-                    aria-hidden="true"
-                  />
-                </a>
-              </span>
-            </div>
             <div className="navbar-item">
               <span className="icon is-small" style={{ marginRight: 4 }}>
                 <i
@@ -185,6 +165,17 @@ const Navbar = () => {
                 <i className="fas fa-map-marker" aria-hidden="true" />
               </span>
               <div className="container"> 1144 NE Cedar Street</div>
+            </div>
+            <div className="navbar-item">
+              <span className="icon is-small" style={{ marginRight: 4 }}>
+                <a href={`mailto:contact@bgcuv.org`}>
+                  <i
+                    className="fas fa-envelope-square"
+                    data-fa-transform="flip-h"
+                    aria-hidden="true"
+                  />
+                </a>
+              </span>
             </div>
           </div>
         </div>
