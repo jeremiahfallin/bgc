@@ -3,31 +3,39 @@ import PropTypes from "prop-types";
 
 import RadialChart from "./RadialChart";
 
-const FeatureGrid = ({ gridItems }) => (
-  <div className="columns is-multiline">
-    {gridItems.map(item => (
-      <div key={item.text} className="column is-4">
-        <section className="section">
-          <div className="has-text-centered">
-            <div
-              style={{
-                width: "240px",
-                display: "inline-block"
-              }}
-            >
-              <RadialChart
-                percent={`${0.4}`}
-                color={`${"#0ff0f0"}`}
-                image={`${item.image.childImageSharp.fluid.src}`}
-              />
+const FeatureGrid = ({ gridItems }) => {
+  const faIcons = ["graduation-cap", "seedling", "users"];
+  const colors = ["#0ff0f0", "#FF8000", "#84bd00"];
+  gridItems.forEach((item, i) => {
+    item.color = colors[i];
+    item.icon = faIcons[i];
+  });
+  return (
+    <div className="columns is-multiline">
+      {gridItems.map(item => (
+        <div key={item.text} className="column is-4">
+          <section className="section">
+            <div className="has-text-centered">
+              <div
+                style={{
+                  width: "240px",
+                  display: "inline-block"
+                }}
+              >
+                <RadialChart
+                  percent={`${item.percent / 100.0}`}
+                  color={`${item.color}`}
+                  icon={`${item.icon}`}
+                />
+              </div>
             </div>
-          </div>
-          <p>{item.text}</p>
-        </section>
-      </div>
-    ))}
-  </div>
-);
+            <p>{item.text}</p>
+          </section>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 FeatureGrid.propTypes = {
   gridItems: PropTypes.arrayOf(

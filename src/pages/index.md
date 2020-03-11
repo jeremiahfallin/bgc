@@ -17,7 +17,7 @@ description: >-
   citizenship, and healthy lifestyles.
 intro:
   heading: What we offer
-  description: '???'
+  description: "???"
   stats:
     - percent: 99
       text: >-
@@ -34,4 +34,3 @@ intro:
         everyone in the group feels important. 66% of teen members surveyed have
         helped out at the Club within the last year.
 ---
-

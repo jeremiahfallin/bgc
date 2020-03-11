@@ -44,7 +44,7 @@ export const IndexPageTemplate = ({
                     <p>{description}</p>
                   </div>
                 </div>
-                <Features gridItems={intro.blurbs} />
+                <Features gridItems={intro.stats} />
                 <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">Events</h3>
                   <EventsRoll />
@@ -130,14 +130,8 @@ export const pageQuery = graphql`
         }
         description
         intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
+          stats {
+            percent
             text
           }
           heading

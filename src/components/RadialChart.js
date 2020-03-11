@@ -1,6 +1,6 @@
 import React from "react";
 
-export default ({ percent, image, color }) => {
+export default ({ percent, color, icon }) => {
   return (
     <svg
       style={{ transform: "rotate(-90deg)" }}
@@ -36,21 +36,11 @@ export default ({ percent, image, color }) => {
       <circle cx="100" cy="100" r="80" fill={color} clipPath="url(#myCircle)" />
       <g style={{ transform: `scale(0.5) translate(50%, 50%)` }}>
         <i
-          className="fas fa-graduation-cap"
+          className={`fas fa-${icon}`}
           data-fa-transform="rotate-90"
           aria-hidden="true"
         />
       </g>
-      {/* <image
-        height="100%"
-        width="100%"
-        style={{
-          transform: `rotate(90deg)`,
-          transformOrigin: `center center`
-        }}
-        href={`${image}`}
-        clipPath="url(#myCircle)"
-      /> */}
     </svg>
   );
 };
