@@ -133,9 +133,11 @@ const Navbar = () => {
                 Sports
               </Link>
               <div className="navbar-dropdown">
-                <Link to="/sports" className="navbar-item">
-                  RSP Info
-                </Link>
+                <div className={`navbar-item`}>
+                  <Link to="/sports" className="navbar-item">
+                    RSP Info
+                  </Link>
+                </div>
                 {subNav.sports.map((link, index) => {
                   return (
                     <div
