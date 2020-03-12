@@ -5,7 +5,7 @@ import { FormsPageTemplate } from "../../templates/forms-page";
 const FormsPagePreview = ({ entry, widgetFor }) => {
   const tags = entry.getIn(["data", "tags"]);
   const files = entry.getIn(["data", "filesList"]);
-  console.log(files);
+  console.log(files.toJS());
 
   return (
     <FormsPageTemplate
