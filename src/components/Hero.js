@@ -41,15 +41,21 @@ export default ({ image, title, subheading }) => {
             <h3
               className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
               style={{
-                boxShadow: "#0081c6 0.5rem 0px 0px, #0081c6 -0.5rem 0px 0px",
-                backgroundColor: "#0081c6",
                 color: "white",
                 lineHeight: "1",
                 padding: "0.25em",
                 marginBottom: "1em"
               }}
             >
-              {subheading}
+              <span
+                style={{
+                  boxShadow: "#0081c6 0.5rem 0px 0px, #0081c6 -0.5rem 0px 0px",
+                  backgroundColor: "#0081c6",
+                  padding: "0.25em"
+                }}
+              >
+                {subheading}
+              </span>
             </h3>
           )}
           <div className="column is-10 is-offset-7">
