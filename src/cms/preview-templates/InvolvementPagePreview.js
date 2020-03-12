@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { InvolvementPageTemplate } from "../../templates/involvement-page";
 
 const InvolvementPagePreview = ({ entry, widgetFor }) => {
-  console.log(entry);
+  console.log(entry.getIn(["data", "title"]));
   return (
     <InvolvementPageTemplate
       title={entry.getIn(["data", "title"])}
