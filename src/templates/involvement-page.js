@@ -73,6 +73,7 @@ export const InvolvementPageTemplate = ({
                             </li>
                             <ul>
                               {files &&
+                                files.files &&
                                 files["files"].map(file => {
                                   if (file) {
                                     console.log(file);
