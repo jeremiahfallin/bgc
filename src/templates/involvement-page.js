@@ -61,35 +61,39 @@ export const InvolvementPageTemplate = ({
                 <ul>
                   {filesList &&
                     filesList.map(files => {
-                      return (
-                        <div key={files.text}>
-                          <li>
-                            <b>
-                              <p>{files.text}</p>
-                            </b>
-                          </li>
-                          <ul>
-                            {files &&
-                              files["files"].map(file => {
-                                if (file) {
-                                  return (
-                                    <li key={file.text}>
-                                      <a
-                                        href={`${withPrefix("/")}img/${
-                                          file.file.relativePath
-                                        }`}
-                                      >
-                                        {file.text}
-                                      </a>
-                                    </li>
-                                  );
-                                } else {
-                                  return null;
-                                }
-                              })}
-                          </ul>
-                        </div>
-                      );
+                      if (files) {
+                        return (
+                          <div key={files.text}>
+                            <li>
+                              <b>
+                                <p>{files.text}</p>
+                              </b>
+                            </li>
+                            <ul>
+                              {files &&
+                                files["files"].map(file => {
+                                  if (file) {
+                                    return (
+                                      <li key={file.text}>
+                                        <a
+                                          href={`${withPrefix("/")}img/${
+                                            file.file.relativePath
+                                          }`}
+                                        >
+                                          {file.text}
+                                        </a>
+                                      </li>
+                                    );
+                                  } else {
+                                    return null;
+                                  }
+                                })}
+                            </ul>
+                          </div>
+                        );
+                      } else {
+                        return null;
+                      }
                     })}
                 </ul>
                 <PageContent className="content" content={content} />
