@@ -4,6 +4,7 @@ import { InvolvementPageTemplate } from "../../templates/involvement-page";
 
 const InvolvementPagePreview = ({ entry, widgetFor }) => {
   console.log(entry.getIn(["data", "title"]));
+  console.log(widgetFor("body"));
   return (
     <InvolvementPageTemplate
       title={entry.getIn(["data", "title"])}
