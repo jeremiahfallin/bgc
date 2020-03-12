@@ -13,6 +13,7 @@ export const InvolvementPageTemplate = ({
   filesList
 }) => {
   const PageContent = contentComponent || Content;
+  console.log(filesList);
 
   return (
     <div>
@@ -61,6 +62,7 @@ export const InvolvementPageTemplate = ({
                 <ul>
                   {filesList &&
                     filesList.map(files => {
+                      console.log(files);
                       if (files) {
                         return (
                           <div key={files.text}>
@@ -73,6 +75,7 @@ export const InvolvementPageTemplate = ({
                               {files &&
                                 files["files"].map(file => {
                                   if (file) {
+                                    console.log(file);
                                     return (
                                       <li key={file.text}>
                                         <a
