@@ -152,6 +152,27 @@ collections:
           - { label: Image, name: image, widget: image }
           - { label: Heading, name: heading, widget: string }
           - { label: "Body", name: "body", widget: "markdown" }
+          - {
+              label: Files List,
+              name: filesList,
+              widget: list,
+              allow_add: true,
+              fields:
+                [
+                  { label: Text, name: text, widget: string },
+                  {
+                    label: Files,
+                    name: files,
+                    widget: list,
+                    allow_add: true,
+                    fields:
+                      [
+                        { label: Text, name: text, widget: text },
+                        { label: File, name: file, widget: file },
+                      ],
+                  },
+                ],
+            }
       - file: "src/pages/sports/index.md"
         label: "Sports Page"
         name: "sports"

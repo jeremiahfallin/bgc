@@ -4,6 +4,17 @@ path: /involvement
 title: Join our Team
 image: /img/img_8685.jpg
 heading: This is BGCUV
+filesList:
+  - files:
+      - file: /img/BGCUV-Employment-Application-1.pdf
+        text: BGCUV Employment Application
+    text: Employment
+  - files:
+      - file: /img/Volunteer-Application1.pdf
+        text: Volunteer Application Form
+      - file: /img/Volunteer-Interest-Form.pdf
+        text: Volunteer Interest Form
+    text: Volunteer
 ---
 
 ### Be Someone to Someone

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
+import { graphql, withPrefix } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
@@ -9,7 +9,8 @@ export const InvolvementPageTemplate = ({
   heading,
   title,
   content,
-  contentComponent
+  contentComponent,
+  filesList
 }) => {
   const PageContent = contentComponent || Content;
 
@@ -50,13 +51,47 @@ export const InvolvementPageTemplate = ({
         </div>
       </div>
       <section className="section section--gradient">
-        <div className="container">
+        <div className="container content">
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="section">
                 <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                   {title}
                 </h2>
+                <ul>
+                  {filesList &&
+                    filesList.map(files => {
+                      return (
+                        <div key={files.text}>
+                          <li>
+                            <b>
+                              <p>{files.text}</p>
+                            </b>
+                          </li>
+                          <ul>
+                            {files &&
+                              files["files"].map(file => {
+                                if (file) {
+                                  return (
+                                    <li key={file.text}>
+                                      <a
+                                        href={`${withPrefix("/")}img/${
+                                          file.file.relativePath
+                                        }`}
+                                      >
+                                        {file.text}
+                                      </a>
+                                    </li>
+                                  );
+                                } else {
+                                  return null;
+                                }
+                              })}
+                          </ul>
+                        </div>
+                      );
+                    })}
+                </ul>
                 <PageContent className="content" content={content} />
               </div>
             </div>
@@ -84,6 +119,7 @@ const InvolvementPage = ({ data }) => {
         title={post.frontmatter.title}
         heading={post.frontmatter.heading}
         content={post.html}
+        filesList={post.frontmatter.filesList}
       />
     </Layout>
   );
@@ -109,6 +145,15 @@ export const involvementPageQuery = graphql`
           }
         }
         heading
+        filesList {
+          text
+          files {
+            text
+            file {
+              relativePath
+            }
+          }
+        }
       }
     }
   }

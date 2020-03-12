@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-import { graphql, Link } from "gatsby";
+import { graphql, withPrefix } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
@@ -36,15 +36,24 @@ export const FormsPageTemplate = ({
                         </b>
                       </li>
                       <ul>
-                        {files["files"].map(file => {
-                          return (
-                            <li key={file.text}>
-                              <Link to={file.file.absolutePath}>
-                                {file.text}
-                              </Link>
-                            </li>
-                          );
-                        })}
+                        {files &&
+                          files["files"].map(file => {
+                            if (file) {
+                              return (
+                                <li key={file.text}>
+                                  <a
+                                    href={`${withPrefix("/")}img/${
+                                      file.file.relativePath
+                                    }`}
+                                  >
+                                    {file.text}
+                                  </a>
+                                </li>
+                              );
+                            } else {
+                              return null;
+                            }
+                          })}
                       </ul>
                     </div>
                   );
