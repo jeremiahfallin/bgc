@@ -38,8 +38,9 @@ export const FormsPageTemplate = ({
                         </li>
                         <ul>
                           {files &&
+                            files.files &&
                             files["files"].map(file => {
-                              if (file) {
+                              if (file && file.file) {
                                 return (
                                   <li key={file.text}>
                                     <a
