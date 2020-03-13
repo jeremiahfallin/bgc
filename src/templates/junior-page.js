@@ -76,6 +76,7 @@ JuniorPageTemplate.propTypes = {
 
 const JuniorPage = ({ data }) => {
   const { markdownRemark: post } = data;
+  console.log(data);
 
   return (
     <Layout>
