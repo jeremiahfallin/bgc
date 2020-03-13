@@ -57,7 +57,6 @@ EventPostTemplate.propTypes = {
 
 const EventPost = ({ data }) => {
   const { markdownRemark: post } = data;
-  console.log(post);
 
   return (
     <Layout>

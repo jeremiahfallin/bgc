@@ -4,7 +4,11 @@ title: Our Junior Club Program
 filesList:
   - files:
       - file: /img/2020-Boys-3rd-4th-Grade-Basketball-Schedule.pdf
-        text: Registration
+        text: Registration Form
+      - file: /img/Code-of-Conduct.pdf
+        text: Code of Conduct
+      - file: /img/Junior-Club-flyer-2019-20.pdf
+        file: Junior Club Flyer
     text: Junior Club Forms
 ---
 

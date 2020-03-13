@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { kebabCase } from "lodash";
 import Helmet from "react-helmet";
-import { graphql, Link } from "gatsby";
+import { graphql, Link, withPrefix } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
@@ -32,7 +32,11 @@ export const SportsPostTemplate = ({
                 files.map(file => {
                   return (
                     <li key={file.text}>
-                      <Link to={file.file.absolutePath}>{file.text}</Link>
+                      <a
+                        href={`${withPrefix("/")}img/${file.file.relativePath}`}
+                      >
+                        {file.text}
+                      </a>
                     </li>
                   );
                 })}
@@ -112,7 +116,7 @@ export const pageQuery = graphql`
         files {
           text
           file {
-            absolutePath
+            relativePath
           }
         }
         tags

@@ -13,9 +13,9 @@ export const SummerPageTemplate = ({
   content,
   contentComponent,
   description,
-  files,
   tags,
   title,
+  filesList,
   helmet
 }) => {
   const PostContent = contentComponent || Content;
@@ -31,21 +31,36 @@ export const SummerPageTemplate = ({
               {title}
             </h1>
             <p>{description}</p>
+            <PostContent content={content} />
             <ul>
-              {files &&
-                files.map(file => {
+              {filesList &&
+                filesList.map(files => {
                   return (
-                    <li key={file.text}>
-                      <a
-                        href={`${withPrefix("/")}img/${file.file.relativePath}`}
-                      >
-                        {file.text}
-                      </a>
-                    </li>
+                    <div key={files.text}>
+                      <li>
+                        <b>
+                          <p>{files.text}</p>
+                        </b>
+                      </li>
+                      <ul>
+                        {files["files"].map(file => {
+                          return (
+                            <li key={file.text}>
+                              <a
+                                href={`${withPrefix("/")}img/${
+                                  file.file.relativePath
+                                }`}
+                              >
+                                {file.text}
+                              </a>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </div>
                   );
                 })}
             </ul>
-            <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
@@ -84,7 +99,7 @@ const SummerPage = ({ data }) => {
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         frontImage={post.frontmatter.frontImage}
-        files={post.frontmatter.files}
+        filesList={post.frontmatter.filesList}
         helmet={
           <Helmet titleTemplate="%s | Summer">
             <title>{`${post.frontmatter.title}`}</title>
@@ -125,10 +140,13 @@ export const pageQuery = graphql`
           }
         }
         description
-        files {
+        filesList {
           text
-          file {
-            relativePath
+          files {
+            text
+            file {
+              relativePath
+            }
           }
         }
         tags

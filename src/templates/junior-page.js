@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-import { graphql, Link } from "gatsby";
+import { graphql, withPrefix } from "gatsby";
 
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
@@ -43,9 +43,13 @@ export const JuniorPageTemplate = ({
                         {files["files"].map(file => {
                           return (
                             <li key={file.text}>
-                              <Link to={file.file.absolutePath}>
+                              <a
+                                href={`${withPrefix("/")}img/${
+                                  file.file.relativePath
+                                }`}
+                              >
                                 {file.text}
-                              </Link>
+                              </a>
                             </li>
                           );
                         })}
@@ -124,7 +128,7 @@ export const pageQuery = graphql`
           files {
             text
             file {
-              absolutePath
+              relativePath
             }
           }
         }

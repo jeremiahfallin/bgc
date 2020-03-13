@@ -20,7 +20,7 @@ class EventRoll extends React.Component {
               >
                 {post.frontmatter.featuredimage ? (
                   <div className="featured-thumbnail">
-                    <Link to={post.fields.slug}>
+                    <Link to={`${post.fields.slug}`}>
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
