@@ -16,8 +16,6 @@ description: >-
   that enrich kids’ lives by impacting  academic success, good character and
   citizenship, and healthy lifestyles.
 intro:
-  heading: What we offer
-  description: "???"
   stats:
     - percent: 99
       text: >-

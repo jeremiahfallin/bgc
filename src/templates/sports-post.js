@@ -16,7 +16,7 @@ export const SportsPostTemplate = ({
   helmet
 }) => {
   const PostContent = contentComponent || Content;
-
+  console.log(files);
   return (
     <section className="section">
       {helmet || ""}
