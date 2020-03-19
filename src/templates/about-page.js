@@ -16,7 +16,6 @@ export const AboutPageTemplate = ({
   staff
 }) => {
   const PageContent = contentComponent || Content;
-  console.log(staff);
 
   return (
     <div>

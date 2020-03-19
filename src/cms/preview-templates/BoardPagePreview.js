@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { SportsPageTemplate } from "../../templates/sports-page";
+import { BoardPageTemplate } from "../../templates/board-page";
 
-const SportsPagePreview = ({ entry, widgetFor }) => {
+const BoardPagePreview = ({ entry, widgetFor }) => {
   return (
-    <SportsPageTemplate
+    <BoardPageTemplate
       image={entry.getIn(["data", "image"])}
       title={entry.getIn(["data", "title"])}
       heading={entry.getIn(["data", "heading"])}
@@ -14,11 +14,11 @@ const SportsPagePreview = ({ entry, widgetFor }) => {
   );
 };
 
-SportsPagePreview.propTypes = {
+BoardPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func
   }),
   getAsset: PropTypes.func
 };
 
-export default SportsPagePreview;
+export default BoardPagePreview;
