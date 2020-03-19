@@ -10,8 +10,8 @@ const AboutPagePreview = ({ entry, widgetFor }) => {
       image={data.image}
       title={data.title}
       heading={data.heading}
-      board={widgetFor("board")}
-      staff={widgetFor("staff")}
+      board={data.board}
+      staff={data.staff}
     />
   );
 };
