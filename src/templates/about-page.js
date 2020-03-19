@@ -15,7 +15,6 @@ export const AboutPageTemplate = ({
   board,
   staff
 }) => {
-  const converter = new showdown.Converter();
   const PageContent = contentComponent || Content;
   console.log(staff);
 
@@ -33,16 +32,10 @@ export const AboutPageTemplate = ({
                 <div className="container content">
                   <div className="columns">
                     <div className="section column">
-                      <PageContent
-                        className="content"
-                        content={converter.makeHtml(staff)}
-                      />
+                      <PageContent className="content" content={staff} />
                     </div>
                     <div className="section column">
-                      <PageContent
-                        className="content"
-                        content={converter.makeHtml(board)}
-                      />
+                      <PageContent className="content" content={board} />
                     </div>
                   </div>
                 </div>
@@ -63,6 +56,7 @@ AboutPageTemplate.propTypes = {
 
 const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data;
+  const converter = new showdown.Converter();
 
   return (
     <Layout>
@@ -71,8 +65,8 @@ const AboutPage = ({ data }) => {
         image={post.frontmatter.image}
         title={post.frontmatter.title}
         heading={post.frontmatter.heading}
-        board={post.frontmatter.board}
-        staff={post.frontmatter.staff}
+        board={converter.makeHtml(post.frontmatter.board)}
+        staff={converter.makeHtml(post.frontmatter.staff)}
       />
     </Layout>
   );
