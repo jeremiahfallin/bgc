@@ -37,6 +37,7 @@ const Navbar = () => {
 
   const subNav = {};
   subNav.programs = [
+    { slug: "/programs", title: "Programs Overview" },
     { slug: "/summer", title: "Summer Programs" },
     { slug: "/junior", title: "Junior Club" }
   ];

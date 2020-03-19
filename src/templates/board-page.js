@@ -6,7 +6,7 @@ import netlifyIdentity from "netlify-identity-widget";
 
 import Layout from "../components/Layout";
 
-export const BoardPostTemplate = ({ filesList, title, helmet }) => {
+export const BoardPageTemplate = ({ filesList, title, helmet }) => {
   const [user, setUser] = useState(netlifyIdentity.currentUser());
 
   netlifyIdentity.on("init", user => {
@@ -81,7 +81,7 @@ export const BoardPostTemplate = ({ filesList, title, helmet }) => {
   );
 };
 
-BoardPostTemplate.propTypes = {
+BoardPageTemplate.propTypes = {
   title: PropTypes.string,
   helmet: PropTypes.object
 };
@@ -93,7 +93,7 @@ const BoardPost = ({ data }) => {
 
   return (
     <Layout>
-      <BoardPostTemplate
+      <BoardPageTemplate
         filesList={post.filesList}
         helmet={
           <Helmet titleTemplate="%s | Board">
