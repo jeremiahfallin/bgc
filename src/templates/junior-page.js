@@ -11,7 +11,6 @@ export const JuniorPageTemplate = ({
   image,
   content,
   contentComponent,
-  description,
   filesList,
   title,
   helmet
@@ -28,7 +27,6 @@ export const JuniorPageTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <p>{description}</p>
             <ul>
               {filesList &&
                 filesList.map(files => {
@@ -69,7 +67,6 @@ export const JuniorPageTemplate = ({
 JuniorPageTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object
 };
@@ -84,7 +81,6 @@ const JuniorPage = ({ data }) => {
         image={post.image}
         content={post.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
         frontImage={post.frontmatter.frontImage}
         filesList={post.frontmatter.filesList}
         helmet={

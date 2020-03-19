@@ -8,7 +8,6 @@ const FormsPagePreview = ({ entry, widgetFor }) => {
   return (
     <FormsPageTemplate
       content={widgetFor("body")}
-      description={entry.getIn(["data", "description"])}
       filesList={files && files.toJS()}
       title={entry.getIn(["data", "title"])}
     />
