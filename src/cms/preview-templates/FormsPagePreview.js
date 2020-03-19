@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { FormsPageTemplate } from "../../templates/forms-page";
 
 const FormsPagePreview = ({ entry, widgetFor }) => {
-  const tags = entry.getIn(["data", "tags"]);
   const files = entry.getIn(["data", "filesList"]);
 
   return (
@@ -11,7 +10,6 @@ const FormsPagePreview = ({ entry, widgetFor }) => {
       content={widgetFor("body")}
       description={entry.getIn(["data", "description"])}
       filesList={files && files.toJS()}
-      tags={tags && tags.toJS()}
       title={entry.getIn(["data", "title"])}
     />
   );

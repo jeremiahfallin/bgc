@@ -3,13 +3,12 @@ import PropTypes from "prop-types";
 import { BoardPageTemplate } from "../../templates/board-page";
 
 const BoardPagePreview = ({ entry, widgetFor }) => {
+  const files = entry.getIn(["data", "filesList"]);
+
   return (
     <BoardPageTemplate
-      image={entry.getIn(["data", "image"])}
       title={entry.getIn(["data", "title"])}
-      heading={entry.getIn(["data", "heading"])}
-      content={widgetFor("body")}
-      intro={entry.getIn(["data"]).toJS().intro || {}}
+      filesList={files && files.toJS()}
     />
   );
 };
