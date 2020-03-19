@@ -17,6 +17,7 @@ export const AboutPageTemplate = ({
 }) => {
   const converter = new showdown.Converter();
   const PageContent = contentComponent || Content;
+  console.log(staff);
 
   return (
     <div>
