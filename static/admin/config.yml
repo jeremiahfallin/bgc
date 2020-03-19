@@ -121,7 +121,8 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: Image, name: image, widget: image }
           - { label: Heading, name: heading, widget: string }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Board", name: "board", widget: "markdown" }
+          - { label: "Staff", name: "staff", widget: "markdown" }
       - file: "src/pages/programs/index.md"
         label: "Programs"
         name: "programs"

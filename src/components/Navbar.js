@@ -15,10 +15,10 @@ const Navbar = () => {
     allMarkdownRemark: { edges: posts }
   } = useStaticQuery(
     graphql`
-      query SportsDropdownQuery {
+      query DropdownQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "sports-post" } } }
+          filter: { frontmatter: { templateKey: { regex: "/post/" } } }
         ) {
           edges {
             node {
@@ -46,11 +46,19 @@ const Navbar = () => {
     { slug: "/forms", title: "Club Forms" }
   ];
   subNav.sports = [];
+  subNav.events = [];
   posts.map(post => {
-    return subNav.sports.push({
-      slug: post.node.fields.slug,
-      title: post.node.frontmatter.title
-    });
+    if (post.node.fields.slug.includes("sports")) {
+      return subNav.sports.push({
+        slug: post.node.fields.slug,
+        title: post.node.frontmatter.title
+      });
+    } else {
+      return subNav.events.push({
+        slug: post.node.fields.slug,
+        title: post.node.frontmatter.title
+      });
+    }
   });
 
   return (
@@ -145,9 +153,27 @@ const Navbar = () => {
                 })}
               </div>
             </div>
-            <Link className="navbar-item" to="/events">
-              Events
-            </Link>
+            <div className={`navbar-item has-dropdown is-hoverable`}>
+              <Link to="/events" className={`navbar-link`}>
+                Events
+              </Link>
+              <div className="navbar-dropdown">
+                <Link to="/events" className="navbar-item">
+                  Event Info
+                </Link>
+                {subNav.events.map((link, index) => {
+                  return (
+                    <Link
+                      to={link.slug}
+                      className={`navbar-item`}
+                      key={"posts-subnav-link-" + index}
+                    >
+                      {link.title}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
           </div>
           <div className="navbar-end has-text-centered">
             <div className="navbar-item">

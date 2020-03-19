@@ -23,7 +23,7 @@ tags:
   - sports
 ---
 
-![flavor wheel](/img/IMG_4648.jpg)
+![Gym](/img/IMG_4648.jpg)
 
 # 2020 Basketball Schedule Now Available!
 
