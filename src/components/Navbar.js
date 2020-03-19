@@ -47,7 +47,7 @@ const Navbar = () => {
     { slug: "/forms", title: "Club Forms" }
   ];
   subNav.sports = [];
-  subNav.events = [];
+  subNav.events = [{ slug: "/partners", title: "Our Community Partners" }];
   posts.map(post => {
     if (post.node.fields.slug.includes("sports")) {
       return subNav.sports.push({
@@ -194,15 +194,20 @@ const Navbar = () => {
               <div className="container"> 1144 NE Cedar Street</div>
             </div>
             <div className="navbar-item">
-              <span className="icon is-small" style={{ marginRight: 4 }}>
-                <a href={`mailto:contact@bgcuv.org`}>
-                  <i
-                    className="fas fa-envelope-square"
-                    data-fa-transform="flip-h"
-                    aria-hidden="true"
-                  />
-                </a>
-              </span>
+              <a
+                className="icon is-small"
+                style={{
+                  marginRight: 4
+                }}
+                href={`mailto:contact@bgcuv.org`}
+              >
+                <i
+                  className="fas fa-envelope-square"
+                  data-fa-transform="flip-h"
+                  aria-hidden="true"
+                />
+              </a>
+              <div className="container">Contact</div>
             </div>
           </div>
         </div>

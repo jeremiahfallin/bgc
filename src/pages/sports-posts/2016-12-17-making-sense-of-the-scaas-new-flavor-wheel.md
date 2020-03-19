@@ -25,11 +25,6 @@ tags:
 
 ![Gym](/img/IMG_4648.jpg)
 
-# 2020 Basketball Schedule Now Available!
+# 2020 Basketball Season
 
-- 2020 Boys 3rd-4th Grade Basketball Schedule
-- 2020 Girls 3rd-4th Grade Basketball Schedule
-- 2020 Boys 5th Grade Basketball Schedule
-- 2020 Girls 5th Grade Basketball Schedule
-- 2020 Boys 6th Grade Basketball Schedule
-- 2020 Girls 6th Grade Basketball Schedule
+Our annual basketball league has started! Above you can find the schedule

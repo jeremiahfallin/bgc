@@ -6,7 +6,7 @@ description: Our Umpqua Uncorked & On Tap event, scheduled for April 4, 2020, ha
 featuredimage: /img/NoLinkWebLogoUUOT-758x1024.png
 ---
 
-![img](/img/LOGOPage26BackgroundUncorked-1.png)
+![Umpqua Uncorked & Untapped Logo](/img/LOGOPage26BackgroundUncorked-1.png)
 
 Umpqua Uncorked & On Tap is the only age 21 and over annual Club event, and features local wines and beers from around the Umpqua Valley. The event includes a wonderful meal, your choice of beverages to sample, camaraderie with friends and neighbors, live music, a silent auction, and more.
 
