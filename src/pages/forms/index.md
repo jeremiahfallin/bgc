@@ -3,6 +3,8 @@ templateKey: forms-page
 title: BGCUV Forms
 filesList:
   - files:
+      - file: /img/2019-20-Club-Calendar.pdf
+        text: Club Calendar
       - file: /img/Membership-Registration-Form.pdf
         text: Membership Registration Form
       - file: /img/Code-of-Conduct.pdf

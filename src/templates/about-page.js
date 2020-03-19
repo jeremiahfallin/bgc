@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
+import showdown from "showdown";
 
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
@@ -10,12 +11,11 @@ export const AboutPageTemplate = ({
   image,
   heading,
   title,
-  content,
   contentComponent,
-  toc
+  board,
+  staff
 }) => {
   const PageContent = contentComponent || Content;
-  const TOC = contentComponent || Content;
 
   return (
     <div>
@@ -28,13 +28,16 @@ export const AboutPageTemplate = ({
                 <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                   {title}
                 </h2>
-                <div className="is-parent column is-6">
-                  <div className="tile is-child">
-                    <TOC className="content toc" content={toc} />
+                <div className="container content">
+                  <div className="columns">
+                    <div className="section column">
+                      <PageContent className="content" content={staff} />
+                    </div>
+                    <div className="section column">
+                      <PageContent className="content" content={board} />
+                    </div>
                   </div>
-                  <div className="column" />
                 </div>
-                <PageContent className="content" content={content} />
               </div>
             </div>
           </div>
@@ -52,6 +55,7 @@ AboutPageTemplate.propTypes = {
 
 const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data;
+  const converter = new showdown.Converter();
 
   return (
     <Layout>
@@ -60,8 +64,8 @@ const AboutPage = ({ data }) => {
         image={post.frontmatter.image}
         title={post.frontmatter.title}
         heading={post.frontmatter.heading}
-        content={post.html}
-        toc={post.tableOfContents}
+        board={converter.makeHtml(post.frontmatter.board)}
+        staff={converter.makeHtml(post.frontmatter.staff)}
       />
     </Layout>
   );
@@ -87,8 +91,9 @@ export const aboutPageQuery = graphql`
           }
         }
         heading
+        board
+        staff
       }
-      tableOfContents(absolute: true)
     }
   }
 `;

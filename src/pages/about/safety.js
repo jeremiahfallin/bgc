@@ -16,7 +16,6 @@ export default () => (
                 Ensuring child safety is fundamental to the mission of{" "}
                 <b>Boys & Girls Club of the Umpqua Valley</b>
               </p>
-
               <h2>
                 The Safety and Well-being of Young People is Our Number One
                 Priority
