@@ -4,6 +4,7 @@ import { BoardPageTemplate } from "../../templates/board-page";
 
 const BoardPagePreview = ({ entry, widgetFor }) => {
   const files = entry.getIn(["data", "filesList"]);
+  console.log(files);
 
   return (
     <BoardPageTemplate
