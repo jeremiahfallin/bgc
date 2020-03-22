@@ -185,13 +185,20 @@ const Navbar = () => {
                   aria-hidden="true"
                 />
               </span>
-              <div className="container">541.440.9505</div>
+              <div className="container">
+                <a href="tel:+1-541-440-9505">541.440.9505</a>
+              </div>
             </div>
             <div className="navbar-item">
               <span className="icon is-small" style={{ marginRight: 4 }}>
                 <i className="fas fa-map-marker" aria-hidden="true" />
               </span>
-              <div className="container"> 1144 NE Cedar Street</div>
+              <div className="container">
+                {" "}
+                <a href={`https://goo.gl/maps/vgouJaD5Ec3m1L9G8`}>
+                  1144 NE Cedar Street
+                </a>
+              </div>
             </div>
             <div className="navbar-item">
               <a
@@ -207,7 +214,9 @@ const Navbar = () => {
                   aria-hidden="true"
                 />
               </a>
-              <div className="container">Contact</div>
+              <div className="container">
+                <a href={`mailto:contact@bgcuv.org`}>Contact</a>
+              </div>
             </div>
           </div>
         </div>

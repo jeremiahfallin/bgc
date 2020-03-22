@@ -5,7 +5,7 @@ import RadialChart from "./RadialChart";
 
 const FeatureGrid = ({ gridItems }) => {
   const faIcons = ["graduation-cap", "seedling", "users"];
-  const colors = ["#0ff0f0", "#FF8000", "#84bd00"];
+  const colors = ["#0ff0f0", "#84bd00", "#FF8000"];
   gridItems.forEach((item, i) => {
     item.color = colors[i];
     item.icon = faIcons[i];

@@ -68,8 +68,7 @@ Customers have an opportunity to donate to the Club through a donation bin at ea
 
 When:
 To be announced
-Customers can link their Fred Meyer rewards card to the Club. Click here:
-https://www.fredmeyer.com/topic/community-rewards-4
+Customers can link their Fred Meyer rewards card to the Club. [Click here](https://www.fredmeyer.com/topic/community-rewards-4).
 
 # AmazonSmile Foundation
 

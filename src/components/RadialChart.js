@@ -36,7 +36,7 @@ export default ({ percent, color, icon }) => {
       <circle cx="100" cy="100" r="80" fill={color} clipPath="url(#myCircle)" />
       <g style={{ transform: `scale(0.5) translate(50%, 50%)` }}>
         <i
-          className={`fas fa-${icon}`}
+          className={`fas fa-${icon} has-text-white-bis`}
           data-fa-transform="rotate-90"
           aria-hidden="true"
         />
