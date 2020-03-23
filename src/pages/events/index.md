@@ -11,4 +11,4 @@ intro:
 
 # Our Fundraising events
 
-We have two major fundraising events each year, along with several events ran by our partners over the course of the year.
+We have two major fundraising events each year, along with several events run by our partners over the course of the year.
