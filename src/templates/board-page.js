@@ -64,7 +64,6 @@ export const BoardPageTemplate = ({ filesList, title, helmet }) => {
                                   <li key={file.text}>
                                     {file.file ? (
                                       <a
-                                        download
                                         href={`${withPrefix("/")}img/${
                                           file.file.relativePath
                                         }`}

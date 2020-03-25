@@ -40,21 +40,25 @@ export const FormsPageTemplate = ({
                           {files &&
                             files.files &&
                             files["files"].map(file => {
-                              if (file && file.file) {
-                                return (
-                                  <li key={file.text}>
-                                    <a
-                                      href={`${withPrefix("/")}img/${
-                                        file.file.relativePath
-                                      }`}
-                                    >
-                                      {file.text}
-                                    </a>
-                                  </li>
-                                );
-                              } else {
-                                return null;
-                              }
+                              return (
+                                <>
+                                  {file.text && (
+                                    <li key={file.text}>
+                                      {file.file ? (
+                                        <a
+                                          href={`${withPrefix("/")}img/${
+                                            file.file.relativePath
+                                          }`}
+                                        >
+                                          {file.text}
+                                        </a>
+                                      ) : (
+                                        file.text
+                                      )}
+                                    </li>
+                                  )}
+                                </>
+                              );
                             })}
                         </ul>
                       </div>

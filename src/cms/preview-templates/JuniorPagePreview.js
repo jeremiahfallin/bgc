@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import { JuniorPageTemplate } from "../../templates/junior-page";
 
 const JuniorPagePreview = ({ entry, widgetFor }) => {
-  const files = entry.getIn(["data", "files"]);
+  const files = entry.getIn(["data", "filesList"]);
+
   return (
     <JuniorPageTemplate
       content={widgetFor("body")}
