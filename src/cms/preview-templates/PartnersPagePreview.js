@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { PartnersPageTemplate } from "../../templates/events-page";
+import { PartnersPageTemplate } from "../../templates/partners-page";
 
 const PartnersPagePreview = ({ entry, widgetFor }) => {
   return (
