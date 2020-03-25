@@ -127,7 +127,7 @@ collections:
       - file: "src/pages/board/index.md"
         label: "Board Page"
         name: "board"
-        media_folder: ''
+        media_folder: '/{{media_folder}}/board'
         public_folder: ''
         fields:
           - {
