@@ -8,7 +8,7 @@ const JuniorPagePreview = ({ entry, widgetFor }) => {
   return (
     <JuniorPageTemplate
       content={widgetFor("body")}
-      files={files && files.toJS()}
+      filesList={files && files.toJS()}
       title={entry.getIn(["data", "title"])}
     />
   );
