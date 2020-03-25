@@ -55,20 +55,22 @@ export const BoardPageTemplate = ({ filesList, title, helmet }) => {
                         </b>
                       </li>
                       <ul>
-                        {files["files"].map(file => {
-                          return (
-                            <li key={file.text}>
-                              <a
-                                download
-                                href={`${withPrefix("/")}img/${
-                                  file.file.relativePath
-                                }`}
-                              >
-                                {file.text}
-                              </a>
-                            </li>
-                          );
-                        })}
+                        {files &&
+                          files.files &&
+                          files["files"].map(file => {
+                            return (
+                              <li key={file.text}>
+                                <a
+                                  download
+                                  href={`${withPrefix("/")}img/${
+                                    file.file.relativePath
+                                  }`}
+                                >
+                                  {file.text}
+                                </a>
+                              </li>
+                            );
+                          })}
                       </ul>
                     </div>
                   );
