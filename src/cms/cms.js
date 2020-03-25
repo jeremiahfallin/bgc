@@ -29,7 +29,7 @@ CMS.registerPreviewTemplate("index", IndexPagePreview);
 CMS.registerPreviewTemplate("info", InfoPagePreview);
 CMS.registerPreviewTemplate("involvement", InvolvementPagePreview);
 CMS.registerPreviewTemplate("junior", JuniorPagePreview);
-CMS.registerPreviewTemplate("programs", PartnersPagePreview);
+CMS.registerPreviewTemplate("partners", PartnersPagePreview);
 CMS.registerPreviewTemplate("programs", ProgramsPagePreview);
 CMS.registerPreviewTemplate("sports", SportsPagePreview);
 CMS.registerPreviewTemplate("sports-post", SportsPostPreview);

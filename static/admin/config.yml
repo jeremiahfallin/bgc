@@ -124,124 +124,6 @@ collections:
           - { label: Heading, name: heading, widget: string }
           - { label: "Board", name: "board", widget: "markdown" }
           - { label: "Staff", name: "staff", widget: "markdown" }
-      - file: "src/pages/programs/index.md"
-        label: "Programs"
-        name: "programs"
-        fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "programs-page",
-            }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: Image, name: image, widget: image }
-          - { label: Heading, name: heading, widget: string }
-          - { label: "Body", name: "body", widget: "markdown" }
-      - file: "src/pages/involvement/index.md"
-        label: "Involvement"
-        name: "involvement"
-        fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "involvement-page",
-            }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: Image, name: image, widget: image }
-          - { label: Heading, name: heading, widget: string }
-          - { label: "Body", name: "body", widget: "markdown" }
-          - {
-              label: Files List,
-              name: filesList,
-              widget: list,
-              allow_add: true,
-              fields:
-                [
-                  { label: Text, name: text, widget: string },
-                  {
-                    label: Files,
-                    name: files,
-                    widget: list,
-                    allow_add: true,
-                    fields:
-                      [
-                        { label: Text, name: text, widget: text },
-                        { label: File, name: file, widget: file },
-                      ],
-                  },
-                ],
-            }
-      - file: "src/pages/sports/index.md"
-        label: "Sports Page"
-        name: "sports"
-        fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "sports-page",
-            }
-          - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: image }
-          - {
-              label: Intro,
-              name: intro,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                ],
-            }
-          - { label: "Body", name: "body", widget: "markdown" }
-      - file: "src/pages/events/index.md"
-        label: "Events Page"
-        name: "events"
-        fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "events-page",
-            }
-          - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: image }
-          - {
-              label: Intro,
-              name: intro,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                ],
-            }
-          - { label: "Body", name: "body", widget: "markdown" }
-      - file: "src/pages/partners/index.md"
-        label: "Partners Page"
-        name: "partners"
-        fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "partners-page",
-            }
-          - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: image }
-          - {
-              label: Intro,
-              name: intro,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                ],
-            }
-          - { label: "Body", name: "body", widget: "markdown" }
       - file: "src/pages/board/index.md"
         label: "Board Page"
         name: "board"
@@ -276,17 +158,75 @@ collections:
                   },
                 ],
             }
-      - file: "src/pages/summer/index.md"
-        label: "Summer Page"
-        name: "summer"
+      - file: "src/pages/events/index.md"
+        label: "Events Page"
+        name: "events"
         fields:
           - {
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "summer-page",
+              default: "events-page",
             }
           - { label: Title, name: title, widget: string }
+          - { label: Image, name: image, widget: image }
+          - {
+              label: Intro,
+              name: intro,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
+                ],
+            }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "src/pages/forms/index.md"
+        label: "Forms Page"
+        name: "forms"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "forms-page",
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - {
+              label: Files List,
+              name: filesList,
+              widget: list,
+              allow_add: true,
+              fields:
+                [
+                  { label: Text, name: text, widget: string },
+                  {
+                    label: Files,
+                    name: files,
+                    widget: list,
+                    allow_add: true,
+                    fields:
+                      [
+                        { label: Text, name: text, widget: text },
+                        { label: File, name: file, widget: file },
+                      ],
+                  },
+                ],
+            }
+      - file: "src/pages/involvement/index.md"
+        label: "Involvement"
+        name: "involvement"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "involvement-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: Image, name: image, widget: image }
+          - { label: Heading, name: heading, widget: string }
           - { label: "Body", name: "body", widget: "markdown" }
           - {
               label: Files List,
@@ -342,15 +282,75 @@ collections:
                   },
                 ],
             }
-      - file: "src/pages/forms/index.md"
-        label: "Forms Page"
-        name: "forms"
+      - file: "src/pages/partners/index.md"
+        label: "Partners Page"
+        name: "partners"
         fields:
           - {
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "forms-page",
+              default: "partners-page",
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Image, name: image, widget: image }
+          - {
+              label: Intro,
+              name: intro,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
+                ],
+            }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "src/pages/programs/index.md"
+        label: "Programs"
+        name: "programs"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "programs-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: Image, name: image, widget: image }
+          - { label: Heading, name: heading, widget: string }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "src/pages/sports/index.md"
+        label: "Sports Page"
+        name: "sports"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "sports-page",
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Image, name: image, widget: image }
+          - {
+              label: Intro,
+              name: intro,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
+                ],
+            }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "src/pages/summer/index.md"
+        label: "Summer Page"
+        name: "summer"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "summer-page",
             }
           - { label: Title, name: title, widget: string }
           - { label: "Body", name: "body", widget: "markdown" }
