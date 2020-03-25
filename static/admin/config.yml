@@ -142,6 +142,7 @@ collections:
               name: filesList,
               widget: list,
               allow_add: true,
+              media_folder: '/{{media_folder}}/board',
               fields:
                 [
                   { label: Text, name: text, widget: string },

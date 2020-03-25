@@ -5,7 +5,7 @@ filesList:
   - text: 3/25/2020 Minutes
     files:
       - text: Budget
-        file: Board Test.pdf
+        file: /img/board/Board Test.pdf
       - text: Corona
-        file: Board Test.pdf
+        file: /img/boardBoard Test.pdf
 ---
