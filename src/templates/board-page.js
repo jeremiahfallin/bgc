@@ -62,7 +62,7 @@ export const BoardPageTemplate = ({ filesList, title, helmet }) => {
                               <>
                                 {file.text && (
                                   <li key={file.text}>
-                                    {file.file && (
+                                    {file.file ? (
                                       <a
                                         download
                                         href={`${withPrefix("/")}img/${
@@ -71,6 +71,8 @@ export const BoardPageTemplate = ({ filesList, title, helmet }) => {
                                       >
                                         {file.text}
                                       </a>
+                                    ) : (
+                                      file.text
                                     )}
                                   </li>
                                 )}

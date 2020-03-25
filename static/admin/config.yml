@@ -99,6 +99,7 @@ collections:
                     name: stats,
                     widget: list,
                     allow_add: false,
+                    delete: false,
                     fields:
                       [
                         { label: Percent, name: percent, widget: number, min: 0, max: 100 },
