@@ -127,8 +127,6 @@ collections:
       - file: "src/pages/board/index.md"
         label: "Board Page"
         name: "board"
-        media_folder: '/static/board'
-        public_folder: ''
         fields:
           - {
               label: "Template Key",
@@ -153,7 +151,7 @@ collections:
                     fields:
                       [
                         { label: Text, name: text, widget: text },
-                        { label: File, name: file, media_folder: '/static/board', widget: file },
+                        { label: File, name: file, widget: file },
                       ],
                   },
                 ],
