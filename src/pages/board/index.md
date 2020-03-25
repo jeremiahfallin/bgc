@@ -3,7 +3,7 @@ templateKey: board-page
 title: Board Page
 filesList:
   - files:
-      - file: Board Test.pdf
+      - file: /img/board/Board Test.pdf
         text: Budget
       - file: /img/2020-Boys-3rd-4th-Grade-Basketball-Schedule.pdf
         text: Topics
