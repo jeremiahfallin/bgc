@@ -62,7 +62,7 @@ export const BoardPageTemplate = ({ filesList, title, helmet }) => {
                                   <li key={file.text}>
                                     {file.file ? (
                                       <a
-                                        href={`${withPrefix("/")}img/${
+                                        href={`${withPrefix("/")}board/${
                                           file.file.relativePath
                                         }`}
                                       >
