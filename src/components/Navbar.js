@@ -99,11 +99,13 @@ const Navbar = () => {
               className={`navbar-item has-dropdown ${
                 selectedDropdown === "about" ? "is-active" : ""
               }`}
-              onClick={e => setSelectedDropdown("about")}
+              onClick={e =>
+                setSelectedDropdown(prev => (prev !== "about" ? "about" : ""))
+              }
             >
-              <Link to="/about" className={`navbar-link`}>
+              <div to="/about" className={`navbar-link`}>
                 About
-              </Link>
+              </div>
               <div className="navbar-dropdown">
                 {subNav.about.map((link, index) => {
                   return (
@@ -125,11 +127,13 @@ const Navbar = () => {
               className={`navbar-item has-dropdown ${
                 selectedDropdown === "programs" ? "is-active" : ""
               }`}
-              onClick={e => setSelectedDropdown("programs")}
+              onClick={e =>
+                setSelectedDropdown(prev =>
+                  prev !== "programs" ? "programs" : ""
+                )
+              }
             >
-              <Link to="/programs" className={`navbar-link`}>
-                Programs
-              </Link>
+              <div className={`navbar-link`}>Programs</div>
               <div className="navbar-dropdown">
                 {subNav.programs.map((link, index) => {
                   return (
@@ -148,11 +152,13 @@ const Navbar = () => {
               className={`navbar-item has-dropdown ${
                 selectedDropdown === "sports" ? "is-active" : ""
               }`}
-              onClick={e => setSelectedDropdown("sports")}
+              onClick={e =>
+                setSelectedDropdown(prev => (prev !== "sports" ? "sports" : ""))
+              }
             >
-              <Link to="/sports" className={`navbar-link`}>
+              <div to="/sports" className={`navbar-link`}>
                 Sports
-              </Link>
+              </div>
               <div className="navbar-dropdown">
                 <Link to="/sports" className="navbar-item">
                   RSP Info
@@ -174,11 +180,13 @@ const Navbar = () => {
               className={`navbar-item has-dropdown ${
                 selectedDropdown === "events" ? "is-active" : ""
               }`}
-              onClick={e => setSelectedDropdown("events")}
+              onClick={e =>
+                setSelectedDropdown(prev => (prev !== "events" ? "events" : ""))
+              }
             >
-              <Link to="/events" className={`navbar-link`}>
+              <div to="/events" className={`navbar-link`}>
                 Events
-              </Link>
+              </div>
               <div className="navbar-dropdown">
                 <Link to="/events" className="navbar-item">
                   Event Info
@@ -198,7 +206,7 @@ const Navbar = () => {
             </div>
           </div>
           <div className="navbar-end has-text-centered">
-            <div className="navbar-item level">
+            <div className="navbar-item level is-marginless">
               <div className="container level-item">
                 <span className="icon is-small" style={{ marginRight: 4 }}>
                   <i

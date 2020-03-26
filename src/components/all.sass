@@ -144,6 +144,7 @@ footer.footer
   border-bottom-color: currentColor
 
 .navbar-link
+  user-select: none
   &:focus,
   &:hover,
   &.is-active
@@ -212,3 +213,9 @@ $menu-label-color: $white-ter
 +mobile
   .navbar-item .navbar-link:not(.is-arrowless)
     padding-right: 0.75rem
+  &.has-dropdown
+    .navbar-dropdown
+      display: none
+    &.is-active
+      .navbar-dropdown
+        display: block
