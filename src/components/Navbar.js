@@ -6,6 +6,7 @@ import logo from "../img/BoysandGirlsLogoHorizontal.png";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
+  const [selectedDropdown, setSelectedDropdown] = useState("");
 
   useEffect(() => {
     netlifyIdentity.init();
@@ -95,7 +96,7 @@ const Navbar = () => {
         >
           <div className="navbar-start has-text-centered">
             <div className={`navbar-item has-dropdown is-hoverable`}>
-              <Link to="/about" className={`navbar-link`}>
+              <Link to="/about" className={`navbar-link is-paddingless`}>
                 About
               </Link>
               <div className="navbar-dropdown">
@@ -115,7 +116,7 @@ const Navbar = () => {
             <Link className="navbar-item" to="/involvement">
               Get Involved
             </Link>
-            <div className={`navbar-item has-dropdown is-hoverable`}>
+            <div className={`navbar-item has-dropdown is-active`}>
               <Link to="/programs" className={`navbar-link`}>
                 Programs
               </Link>

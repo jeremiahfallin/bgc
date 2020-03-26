@@ -50,9 +50,7 @@ export const BoardPageTemplate = ({ filesList, title, helmet }) => {
                   return (
                     <div key={files.text}>
                       <li>
-                        <b>
-                          <p>{files.text}</p>
-                        </b>
+                        <p className="has-text-weight-bold">{files.text}</p>
                       </li>
                       <ul>
                         {files &&
