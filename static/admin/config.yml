@@ -127,6 +127,7 @@ collections:
       - file: "src/pages/board/index.md"
         label: "Board Page"
         name: "board"
+        public_folder: '/static/board'
         media_folder: '/static/board'
         fields:
           - {
@@ -140,8 +141,6 @@ collections:
               label: Files List,
               name: filesList,
               widget: list,
-              media_folder: '',
-
               allow_add: true,
               fields:
                 [
