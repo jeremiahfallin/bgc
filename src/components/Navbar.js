@@ -198,8 +198,8 @@ const Navbar = () => {
             </div>
           </div>
           <div className="navbar-end has-text-centered">
-            <div className="navbar-item">
-              <div className="container">
+            <div className="navbar-item level">
+              <div className="container level-item">
                 <span className="icon is-small" style={{ marginRight: 4 }}>
                   <i
                     className="fas fa-phone"
@@ -210,12 +210,9 @@ const Navbar = () => {
                 <a href="tel:+1-541-440-9505">541.440.9505</a>
               </div>
             </div>
-            <div className="navbar-item">
-              <div className="container level">
-                <span
-                  className="icon is-small level-item"
-                  style={{ marginRight: 4 }}
-                >
+            <div className="navbar-item level is-marginless">
+              <div className="container level-item">
+                <span className="icon is-small" style={{ marginRight: 4 }}>
                   <i className="fas fa-map-marker" aria-hidden="true" />
                 </span>{" "}
                 <a href={`https://goo.gl/maps/vgouJaD5Ec3m1L9G8`}>
@@ -223,8 +220,8 @@ const Navbar = () => {
                 </a>
               </div>
             </div>
-            <div className="navbar-item">
-              <div className="container level">
+            <div className="navbar-item level is-marginless">
+              <div className="container level-item">
                 <a
                   className="icon is-small"
                   style={{
