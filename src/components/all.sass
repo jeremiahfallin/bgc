@@ -188,9 +188,6 @@ $menu-label-color: $white-ter
   vertical-align: middle
   display: inline
 
-.navbar-link:not(.is-arrowless)
-  padding-right: 0.75rem
-
 
 // blog roll
 .blog-list-item.is-featured
@@ -204,17 +201,14 @@ $menu-label-color: $white-ter
 
 @import "~bulma"
 
++mobile
+  
+
 // responsiveness
-  +tablet-only
++tablet-only
   .blog-list-item .featured-thumbnail
     flex-basis: 50%
 
-  +mobile
-  .blog-list-item
-    position: static
-  .navbar-group-links
-    position: block
-  .blog-list-item .featured-thumbnail
-    text-align: center
-    max-width: 70%
-    margin: 0 0 1em
++mobile
+  .navbar-item .navbar-link:not(.is-arrowless)
+    padding-right: 0.75rem

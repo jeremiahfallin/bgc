@@ -95,8 +95,13 @@ const Navbar = () => {
           aria-label="dropdown navigation"
         >
           <div className="navbar-start has-text-centered">
-            <div className={`navbar-item has-dropdown is-hoverable`}>
-              <Link to="/about" className={`navbar-link is-paddingless`}>
+            <div
+              className={`navbar-item has-dropdown ${
+                selectedDropdown === "about" ? "is-active" : ""
+              }`}
+              onClick={e => setSelectedDropdown("about")}
+            >
+              <Link to="/about" className={`navbar-link`}>
                 About
               </Link>
               <div className="navbar-dropdown">
@@ -116,7 +121,12 @@ const Navbar = () => {
             <Link className="navbar-item" to="/involvement">
               Get Involved
             </Link>
-            <div className={`navbar-item has-dropdown is-active`}>
+            <div
+              className={`navbar-item has-dropdown ${
+                selectedDropdown === "programs" ? "is-active" : ""
+              }`}
+              onClick={e => setSelectedDropdown("programs")}
+            >
               <Link to="/programs" className={`navbar-link`}>
                 Programs
               </Link>
@@ -134,7 +144,12 @@ const Navbar = () => {
                 })}
               </div>
             </div>
-            <div className={`navbar-item has-dropdown is-hoverable`}>
+            <div
+              className={`navbar-item has-dropdown ${
+                selectedDropdown === "sports" ? "is-active" : ""
+              }`}
+              onClick={e => setSelectedDropdown("sports")}
+            >
               <Link to="/sports" className={`navbar-link`}>
                 Sports
               </Link>
@@ -155,7 +170,12 @@ const Navbar = () => {
                 })}
               </div>
             </div>
-            <div className={`navbar-item has-dropdown is-hoverable`}>
+            <div
+              className={`navbar-item has-dropdown ${
+                selectedDropdown === "events" ? "is-active" : ""
+              }`}
+              onClick={e => setSelectedDropdown("events")}
+            >
               <Link to="/events" className={`navbar-link`}>
                 Events
               </Link>
@@ -179,43 +199,45 @@ const Navbar = () => {
           </div>
           <div className="navbar-end has-text-centered">
             <div className="navbar-item">
-              <span className="icon is-small" style={{ marginRight: 4 }}>
-                <i
-                  className="fas fa-phone"
-                  data-fa-transform="flip-h"
-                  aria-hidden="true"
-                />
-              </span>
               <div className="container">
+                <span className="icon is-small" style={{ marginRight: 4 }}>
+                  <i
+                    className="fas fa-phone"
+                    data-fa-transform="flip-h"
+                    aria-hidden="true"
+                  />
+                </span>
                 <a href="tel:+1-541-440-9505">541.440.9505</a>
               </div>
             </div>
             <div className="navbar-item">
-              <span className="icon is-small" style={{ marginRight: 4 }}>
-                <i className="fas fa-map-marker" aria-hidden="true" />
-              </span>
-              <div className="container">
-                {" "}
+              <div className="container level">
+                <span
+                  className="icon is-small level-item"
+                  style={{ marginRight: 4 }}
+                >
+                  <i className="fas fa-map-marker" aria-hidden="true" />
+                </span>{" "}
                 <a href={`https://goo.gl/maps/vgouJaD5Ec3m1L9G8`}>
                   1144 NE Cedar Street
                 </a>
               </div>
             </div>
             <div className="navbar-item">
-              <a
-                className="icon is-small"
-                style={{
-                  marginRight: 4
-                }}
-                href={`mailto:contact@bgcuv.org`}
-              >
-                <i
-                  className="fas fa-envelope-square"
-                  data-fa-transform="flip-h"
-                  aria-hidden="true"
-                />
-              </a>
-              <div className="container">
+              <div className="container level">
+                <a
+                  className="icon is-small"
+                  style={{
+                    marginRight: 4
+                  }}
+                  href={`mailto:contact@bgcuv.org`}
+                >
+                  <i
+                    className="fas fa-envelope-square"
+                    data-fa-transform="flip-h"
+                    aria-hidden="true"
+                  />
+                </a>
                 <a href={`mailto:contact@bgcuv.org`}>Contact</a>
               </div>
             </div>
