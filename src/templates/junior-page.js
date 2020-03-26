@@ -38,19 +38,29 @@ export const JuniorPageTemplate = ({
                         </b>
                       </li>
                       <ul>
-                        {files["files"].map(file => {
-                          return (
-                            <li key={file.text}>
-                              <a
-                                href={`${withPrefix("/")}img/${
-                                  file.file.relativePath
-                                }`}
-                              >
-                                {file.text}
-                              </a>
-                            </li>
-                          );
-                        })}
+                        {files &&
+                          files.files &&
+                          files["files"].map(file => {
+                            return (
+                              <>
+                                {file.text && (
+                                  <li key={file.text}>
+                                    {file.file ? (
+                                      <a
+                                        href={`${withPrefix("/")}img/${
+                                          file.file.relativePath
+                                        }`}
+                                      >
+                                        {file.text}
+                                      </a>
+                                    ) : (
+                                      file.text
+                                    )}
+                                  </li>
+                                )}
+                              </>
+                            );
+                          })}
                       </ul>
                     </div>
                   );

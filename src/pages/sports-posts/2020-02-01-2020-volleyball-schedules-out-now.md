@@ -6,7 +6,7 @@ description: >-
   The 2020 BGCUV volleyball season is starting soon and below you can find the
   schedules for each team.
 featuredpost: false
-featuredimage: /img/blog-index.jpg
+featuredimage:
 files:
   - file: /img/2020-Boys-3rd-4th-Grade-Basketball-Schedule.pdf
     text: 2020 Boys 3rd/4th Grade Schedule

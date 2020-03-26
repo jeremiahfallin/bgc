@@ -62,40 +62,40 @@ export const InvolvementPageTemplate = ({
                 <ul>
                   {filesList &&
                     filesList.map(files => {
-                      if (files) {
-                        return (
-                          <div key={files.text}>
-                            <li>
-                              <b>
-                                <p>{files.text}</p>
-                              </b>
-                            </li>
-                            <ul>
-                              {files &&
-                                files.files &&
-                                files["files"].map(file => {
-                                  if (file && file.file) {
-                                    return (
+                      return (
+                        <div key={files.text}>
+                          <li>
+                            <b>
+                              <p>{files.text}</p>
+                            </b>
+                          </li>
+                          <ul>
+                            {files &&
+                              files.files &&
+                              files["files"].map(file => {
+                                return (
+                                  <>
+                                    {file.text && (
                                       <li key={file.text}>
-                                        <a
-                                          href={`${withPrefix("/")}img/${
-                                            file.file.relativePath
-                                          }`}
-                                        >
-                                          {file.text}
-                                        </a>
+                                        {file.file ? (
+                                          <a
+                                            href={`${withPrefix("/")}img/${
+                                              file.file.relativePath
+                                            }`}
+                                          >
+                                            {file.text}
+                                          </a>
+                                        ) : (
+                                          file.text
+                                        )}
                                       </li>
-                                    );
-                                  } else {
-                                    return null;
-                                  }
-                                })}
-                            </ul>
-                          </div>
-                        );
-                      } else {
-                        return null;
-                      }
+                                    )}
+                                  </>
+                                );
+                              })}
+                          </ul>
+                        </div>
+                      );
                     })}
                 </ul>
                 <PageContent className="content" content={content} />

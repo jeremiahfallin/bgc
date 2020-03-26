@@ -16,7 +16,7 @@ export const SportsPostTemplate = ({
   helmet
 }) => {
   const PostContent = contentComponent || Content;
-  console.log(files);
+
   return (
     <section className="section">
       {helmet || ""}
@@ -29,8 +29,7 @@ export const SportsPostTemplate = ({
             <p>{description}</p>
             <ul>
               {files &&
-                files.files &&
-                files["files"].map(file => {
+                files.map(file => {
                   return (
                     <>
                       {file.text && (

@@ -24,19 +24,21 @@ export default ({ image, title, subheading }) => {
             flexDirection: "column"
           }}
         >
-          <h1
-            className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-            style={{
-              boxShadow: "#0081c6 0.5rem 0px 0px, #0081c6 -0.5rem 0px 0px",
-              backgroundColor: "#0081c6",
-              color: "white",
-              lineHeight: "1",
-              padding: "0.25em",
-              marginBottom: ".5em"
-            }}
-          >
-            {title}
-          </h1>
+          {title && (
+            <h1
+              className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+              style={{
+                boxShadow: "#0081c6 0.5rem 0px 0px, #0081c6 -0.5rem 0px 0px",
+                backgroundColor: "#0081c6",
+                color: "white",
+                lineHeight: "1",
+                padding: "0.25em",
+                marginBottom: ".5em"
+              }}
+            >
+              {title}
+            </h1>
+          )}
           {subheading && (
             <h3
               className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
