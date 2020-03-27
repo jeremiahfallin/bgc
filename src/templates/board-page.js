@@ -60,6 +60,7 @@ export const BoardPageTemplate = ({ filesList, title, helmet }) => {
                               <>
                                 {file.text && (
                                   <li key={file.text}>
+                                    {console.log(file.file.relativePath)}
                                     {file.file ? (
                                       <a
                                         href={`${withPrefix("/")}board/${
@@ -94,6 +95,7 @@ BoardPageTemplate.propTypes = {
 };
 
 const BoardPost = ({ data }) => {
+  console.log(data);
   const {
     markdownRemark: { frontmatter: post }
   } = data;
