@@ -26,7 +26,6 @@ export const BoardPageTemplate = ({ filesList, title, helmet }) => {
   return (
     <section className="section">
       {helmet || ""}
-      {console.log(filesList)}
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
@@ -94,7 +93,6 @@ BoardPageTemplate.propTypes = {
 };
 
 const BoardPost = ({ data }) => {
-  console.log(data);
   const {
     markdownRemark: { frontmatter: post }
   } = data;
