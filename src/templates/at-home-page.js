@@ -16,7 +16,6 @@ export const AtHomePageTemplate = ({
   return (
     <div>
       <section className="section section--gradient">
-        {title}
         <div className="container">
           <div className="section">
             <div className="columns">
