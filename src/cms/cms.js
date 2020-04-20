@@ -3,6 +3,8 @@ import CMS from "netlify-cms-app";
 // import cloudinary from 'netlify-cms-media-library-cloudinary'
 
 import AboutPagePreview from "./preview-templates/AboutPagePreview";
+import AtHomePagePreview from "./preview-templates/AtHomePagePreview";
+import AtHomePostPreview from "./preview-templates/SportsPostPreview";
 import BoardPagePreview from "./preview-templates/BoardPagePreview";
 import EventsPagePreview from "./preview-templates/EventsPagePreview";
 import EventPostPreview from "./preview-templates/EventPostPreview";
@@ -21,6 +23,8 @@ import SummerPagePreview from "./preview-templates/SummerPagePreview";
 // CMS.registerMediaLibrary(cloudinary)
 
 CMS.registerPreviewTemplate("about", AboutPagePreview);
+CMS.registerPreviewTemplate("at-home", AtHomePagePreview);
+CMS.registerPreviewTemplate("at-home-post", AtHomePagePreview);
 CMS.registerPreviewTemplate("board", BoardPagePreview);
 CMS.registerPreviewTemplate("events", EventsPagePreview);
 CMS.registerPreviewTemplate("events-post", EventPostPreview);
@@ -37,6 +41,7 @@ CMS.registerPreviewTemplate("summer", SummerPagePreview);
 
 // Pages:
 // Index
+// At Home
 // Get Involved
 // Programs
 // Club Info

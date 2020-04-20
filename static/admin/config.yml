@@ -12,6 +12,47 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: "at-home-post"
+    label: "At Home Post"
+    folder: "src/pages/at-home-posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "at-home-post",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
+      - { label: "Featured Image", name: "featuredimage", widget: image }
+      - {
+        label: Videos,
+        name: videos,
+        widget: list,
+        allow_add: true,
+        fields:
+          [
+            { label: Text, name: text, widget: string },
+            { label: Video, name: video, widget: string }
+          ]
+      }
+      - {
+          label: Files,
+          name: files,
+          widget: list,
+          allow_add: true,
+          fields:
+            [
+              { label: Text, name: text, widget: string },
+              { label: File, name: file, widget: file },
+            ],
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list" }
   - name: "event-post"
     label: "Event Posts"
     folder: "src/pages/event-posts"
@@ -109,6 +150,28 @@ collections:
                 ],
             }
 
+      - file: "src/pages/at-home/index.md"
+        label: "At Home Page"
+        name: "at-home"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "at-home-page",
+            }
+          - { label: Title, name: title, widget: string }
+          - {
+              label: Intro,
+              name: intro,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
+                ],
+            }
+          - { label: "Body", name: "body", widget: "markdown" }
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
