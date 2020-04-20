@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
-import SportsPostsRoll from "../components/SportsPostsRoll";
+import AtHomeRoll from "../components/AtHomeRoll";
 
 export const AtHomePageTemplate = ({
   title,
@@ -36,9 +36,9 @@ export const AtHomePageTemplate = ({
                   )}
                   <div className="content">
                     <h3 className="has-text-weight-semibold is-size-2">
-                      Latest Sports News
+                      Educational Success
                     </h3>
-                    <SportsPostsRoll />
+                    <AtHomeRoll theme="Educational Success" />
                   </div>
                   <div className="content">
                     <PostContent content={content} />
