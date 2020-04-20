@@ -1,21 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { kebabCase } from "lodash";
 import Helmet from "react-helmet";
 import { graphql, Link, withPrefix } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import Videos from "../components/Videos";
 
 export const AtHomePostTemplate = ({
   content,
   contentComponent,
   description,
   files,
+  videos,
   tags,
   title,
   helmet
 }) => {
   const PostContent = contentComponent || Content;
+  const [activeVideo, setActiveVideo] = useState({
+    text: videos[0].text,
+    id: videos[0].video
+  });
+
+  const setVideo = video => {
+    setActiveVideo({ id: video.video, text: video.text });
+  };
 
   return (
     <section className="section">
@@ -51,7 +61,16 @@ export const AtHomePostTemplate = ({
                   );
                 })}
             </ul>
-            <PostContent content={content} />
+            <div className="container">
+              <PostContent className="content" content={content} />
+            </div>
+            <div className="container" style={{ marginTop: 20 }}>
+              <Videos
+                videos={videos}
+                setVideo={setVideo}
+                activeVideo={activeVideo}
+              />
+            </div>
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
@@ -90,6 +109,7 @@ const AtHomePost = ({ data }) => {
         description={post.frontmatter.description}
         frontImage={post.frontmatter.frontImage}
         files={post.frontmatter.files}
+        videos={post.frontmatter.videos}
         helmet={
           <Helmet titleTemplate="%s | Sports">
             <title>{`${post.frontmatter.title}`}</title>
@@ -128,6 +148,10 @@ export const pageQuery = graphql`
           file {
             relativePath
           }
+        }
+        videos {
+          video
+          text
         }
         tags
       }

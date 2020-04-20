@@ -27,7 +27,7 @@ export const FormsPageTemplate = ({
             <p>{description}</p>
             <ul>
               {filesList &&
-                filesList.map(files => {
+                filesList.map((files, index) => {
                   if (files) {
                     return (
                       <div key={files.text}>
@@ -132,7 +132,7 @@ export const pageQuery = graphql`
           files {
             text
             file {
-              absolutePath
+              relativePath
             }
           }
         }

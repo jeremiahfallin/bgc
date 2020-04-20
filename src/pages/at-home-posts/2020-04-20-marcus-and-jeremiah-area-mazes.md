@@ -14,5 +14,7 @@ tags:
   - BGCUVAtHome
   - Power Hour
   - Math
+  - Educational Success
 ---
+
 Hey everyone! Marcus and Jeremiah are here to show you Area Mazes! They are a type of logic puzzle that doesn't have very complicated rules but they're extremely satisfying to solve. This page will get updated whenever new videos are posted to the series, so don't forget to check back in!

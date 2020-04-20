@@ -49,14 +49,14 @@ const Navbar = () => {
   ];
   subNav.sports = [];
   subNav.events = [{ slug: "/partners", title: "Our Community Partners" }];
-  posts.map(post => {
+  posts.forEach(post => {
     if (post.node.fields.slug.includes("sports")) {
-      return subNav.sports.push({
+      subNav.sports.push({
         slug: post.node.fields.slug,
         title: post.node.frontmatter.title
       });
-    } else {
-      return subNav.events.push({
+    } else if (post.node.fields.slug.includes("event-posts")) {
+      subNav.events.push({
         slug: post.node.fields.slug,
         title: post.node.frontmatter.title
       });
