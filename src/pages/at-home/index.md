@@ -1,5 +1,5 @@
 ---
-templateKey: "sports-page"
+templateKey: "at-home-page"
 path: /sports
 title: BGCUV Sports Program
 intro:

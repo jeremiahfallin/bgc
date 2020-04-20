@@ -16,7 +16,7 @@ AtHomeRoll.propTypes = {
   })
 };
 
-export default () => (
+export default theme => (
   <StaticQuery
     query={graphql`
       query AtHomeRollQuery {
