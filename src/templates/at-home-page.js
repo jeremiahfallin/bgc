@@ -3,12 +3,10 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
-import Hero from "../components/Hero";
 import Content, { HTMLContent } from "../components/Content";
 import SportsPostsRoll from "../components/SportsPostsRoll";
 
-export const SportsPageTemplate = ({
-  image,
+export const AtHomePageTemplate = ({
   title,
   intro,
   content,
@@ -17,8 +15,8 @@ export const SportsPageTemplate = ({
   const PostContent = contentComponent || Content;
   return (
     <div>
-      <Hero {...{ image, title }} />
       <section className="section section--gradient">
+        {title}
         <div className="container">
           <div className="section">
             <div className="columns">
@@ -55,19 +53,17 @@ export const SportsPageTemplate = ({
   );
 };
 
-SportsPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+AtHomePageTemplate.propTypes = {
   title: PropTypes.string,
   heading: PropTypes.string
 };
 
-const SportsPage = ({ data }) => {
+const AtHomePage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
-      <SportsPageTemplate
-        image={frontmatter.image}
+      <AtHomePageTemplate
         title={frontmatter.title}
         heading={frontmatter.heading}
         intro={frontmatter.intro}
@@ -78,7 +74,7 @@ const SportsPage = ({ data }) => {
   );
 };
 
-SportsPage.propTypes = {
+AtHomePage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object
@@ -86,21 +82,14 @@ SportsPage.propTypes = {
   })
 };
 
-export default SportsPage;
+export default AtHomePage;
 
-export const sportsPageQuery = graphql`
-  query SportsPage($id: String!) {
+export const atHomePageQuery = graphql`
+  query AtHomePage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         intro {
           heading
           description
