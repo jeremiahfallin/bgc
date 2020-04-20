@@ -24,7 +24,7 @@ import SummerPagePreview from "./preview-templates/SummerPagePreview";
 
 CMS.registerPreviewTemplate("about", AboutPagePreview);
 CMS.registerPreviewTemplate("at-home", AtHomePagePreview);
-CMS.registerPreviewTemplate("at-home-post", AtHomePagePreview);
+CMS.registerPreviewTemplate("at-home-post", AtHomePostPreview);
 CMS.registerPreviewTemplate("board", BoardPagePreview);
 CMS.registerPreviewTemplate("events", EventsPagePreview);
 CMS.registerPreviewTemplate("events-post", EventPostPreview);
