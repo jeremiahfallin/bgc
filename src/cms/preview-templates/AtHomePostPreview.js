@@ -6,6 +6,7 @@ const AtHomePostPreview = ({ entry, widgetFor }) => {
   const tags = entry.getIn(["data", "tags"]);
   const files = entry.getIn(["data", "files"]);
   const videos = entry.getIn(["data", "videos"]);
+  console.log(videos);
 
   return (
     <AtHomePostTemplate
