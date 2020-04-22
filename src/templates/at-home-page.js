@@ -10,7 +10,7 @@ export const AtHomePageTemplate = ({
   title,
   intro,
   content,
-  contentComponent
+  contentComponent,
 }) => {
   const PostContent = contentComponent || Content;
   return (
@@ -46,8 +46,10 @@ export const AtHomePageTemplate = ({
                       {`S.T.E.A.M. & Arts`}
                     </h3>
                     <AtHomeRoll theme="S.T.E.A.M. & Arts" />
-                    <h3 className="has-text-weight-semibold is-size-2">Art</h3>
-                    <AtHomeRoll theme="Art" />
+                    <h3 className="has-text-weight-semibold is-size-2">
+                      Games & Recreation
+                    </h3>
+                    <AtHomeRoll theme="Games & Recreation" />
                     <h3 className="has-text-weight-semibold is-size-2">
                       Healthy Lifestyles
                     </h3>
@@ -68,7 +70,7 @@ export const AtHomePageTemplate = ({
 
 AtHomePageTemplate.propTypes = {
   title: PropTypes.string,
-  heading: PropTypes.string
+  heading: PropTypes.string,
 };
 
 const AtHomePage = ({ data }) => {
@@ -90,9 +92,9 @@ const AtHomePage = ({ data }) => {
 AtHomePage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object
-    })
-  })
+      frontmatter: PropTypes.object,
+    }),
+  }),
 };
 
 export default AtHomePage;

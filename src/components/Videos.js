@@ -18,7 +18,12 @@ const Videos = ({ videos, setVideo, activeVideo }) => {
               aria-controls="dropdown-menu"
               onClick={(e) => setActive((a) => !a)}
             >
-              <div style={{ display: "grid", gridTemplate: "1 / 1" }}>
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplate: "1 / 1",
+                }}
+              >
                 {videos.map((video) => {
                   return (
                     <span
