@@ -9,6 +9,7 @@ videos:
   - video: U7XYzPfutBs
     text: Glitter Bottles
 tags:
-  - S.T.E.A.M. & Arts
+  - Games & Recreation
 ---
+
 Have extra marbles? Have paper? Have dreams of engineering? This video will help you combine all of that into your own rollercoaster track!
