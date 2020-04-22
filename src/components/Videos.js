@@ -18,9 +18,24 @@ const Videos = ({ videos, setVideo, activeVideo }) => {
               aria-controls="dropdown-menu"
               onClick={(e) => setActive((a) => !a)}
             >
-              <span>{activeVideo.text}</span>
+              <div style={{ display: "grid", gridTemplate: "1 / 1" }}>
+                {videos.map((video) => {
+                  return (
+                    <span
+                      style={{
+                        gridArea: "1 / 1",
+                        opacity: `${
+                          video.text === activeVideo.text ? "100" : "0"
+                        }`,
+                      }}
+                    >
+                      {video.text}
+                    </span>
+                  );
+                })}
+              </div>
               <span className="icon is-small">
-                <i className="fas fa-angle-down" aria-hidden="true"></i>
+                <i className="fas fa-angle-down" aria-hidden="true" />
               </span>
             </button>
           </div>
