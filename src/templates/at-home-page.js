@@ -35,23 +35,23 @@ export const AtHomePageTemplate = ({
                   )}
                   <div className="content">
                     <h3 className="has-text-weight-semibold is-size-2">
-                      Educational Success
+                      Educational Success & Power Hour
                     </h3>
-                    <AtHomeRoll theme="Educational Success" />
+                    <AtHomeRoll theme="Educational Success & Power Hour" />
                     <h3 className="has-text-weight-semibold is-size-2">
-                      {`Health & Sports`}
+                      {`Sports & Fitness`}
                     </h3>
-                    <AtHomeRoll theme="Health & Sports" />
+                    <AtHomeRoll theme="Sports & Fitness" />
                     <h3 className="has-text-weight-semibold is-size-2">
-                      S.T.E.M.
+                      {`S.T.E.A.M. & Arts`}
                     </h3>
-                    <AtHomeRoll theme="S.T.E.M." />
+                    <AtHomeRoll theme="S.T.E.A.M. & Arts" />
                     <h3 className="has-text-weight-semibold is-size-2">Art</h3>
                     <AtHomeRoll theme="Art" />
                     <h3 className="has-text-weight-semibold is-size-2">
-                      Social / Emotional Learning
+                      Healthy Lifestyles
                     </h3>
-                    <AtHomeRoll theme="Social / Emotional Learning" />
+                    <AtHomeRoll theme="Healthy Lifestyles" />
                   </div>
                   <div className="content">
                     <PostContent content={content} />

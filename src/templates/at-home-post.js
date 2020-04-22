@@ -19,8 +19,8 @@ export const AtHomePostTemplate = ({
 }) => {
   const PostContent = contentComponent || Content;
   const [activeVideo, setActiveVideo] = useState({
-    text: videos[0].text,
-    id: videos[0].video
+    text: videos ? videos[0].text : null,
+    id: videos ? videos[0].video : null
   });
 
   const setVideo = video => {
@@ -64,13 +64,15 @@ export const AtHomePostTemplate = ({
             <div className="container">
               <PostContent className="content" content={content} />
             </div>
-            <div className="container" style={{ marginTop: 20 }}>
-              <Videos
-                videos={videos}
-                setVideo={setVideo}
-                activeVideo={activeVideo}
-              />
-            </div>
+            {videos && (
+              <div className="container" style={{ marginTop: 20 }}>
+                <Videos
+                  videos={videos}
+                  setVideo={setVideo}
+                  activeVideo={activeVideo}
+                />
+              </div>
+            )}
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
