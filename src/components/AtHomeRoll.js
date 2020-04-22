@@ -4,7 +4,15 @@ import { graphql, StaticQuery } from "gatsby";
 
 import Roll from "./Roll";
 
-const AtHomeRoll = ({ data, count }) => {
+const AtHomeRoll = ({ data, count, theme }) => {
+  console.log(data);
+  data = {
+    allMarkdownRemark: {
+      edges: data.allMarkdownRemark.edges.filter(edge =>
+        edge.node.frontmatter.tags.includes(theme)
+      )
+    }
+  };
   return <Roll data={data} count={count} />;
 };
 
@@ -16,7 +24,7 @@ AtHomeRoll.propTypes = {
   })
 };
 
-export default theme => (
+export default ({ theme }) => (
   <StaticQuery
     query={graphql`
       query AtHomeRollQuery {
@@ -36,6 +44,7 @@ export default theme => (
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
+                tags
                 featuredimage {
                   childImageSharp {
                     fluid(maxWidth: 120, quality: 100) {
@@ -49,6 +58,8 @@ export default theme => (
         }
       }
     `}
-    render={(data, count) => <AtHomeRoll data={data} count={count} />}
+    render={(data, count) => (
+      <AtHomeRoll data={data} count={count} theme={theme} />
+    )}
   />
 );

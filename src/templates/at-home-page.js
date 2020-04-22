@@ -38,6 +38,20 @@ export const AtHomePageTemplate = ({
                       Educational Success
                     </h3>
                     <AtHomeRoll theme="Educational Success" />
+                    <h3 className="has-text-weight-semibold is-size-2">
+                      {`Health & Sports`}
+                    </h3>
+                    <AtHomeRoll theme="Health & Sports" />
+                    <h3 className="has-text-weight-semibold is-size-2">
+                      S.T.E.M.
+                    </h3>
+                    <AtHomeRoll theme="S.T.E.M." />
+                    <h3 className="has-text-weight-semibold is-size-2">Art</h3>
+                    <AtHomeRoll theme="Art" />
+                    <h3 className="has-text-weight-semibold is-size-2">
+                      Social / Emotional Learning
+                    </h3>
+                    <AtHomeRoll theme="Social / Emotional Learning" />
                   </div>
                   <div className="content">
                     <PostContent content={content} />
