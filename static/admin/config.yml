@@ -30,16 +30,16 @@ collections:
       - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
       - { label: "Featured Image", name: "featuredimage", widget: image }
       - {
-        label: Videos,
-        name: videos,
-        widget: list,
-        allow_add: true,
-        fields:
-          [
-            { label: Text, name: text, widget: string },
-            { label: Video, name: video, widget: string }
-          ]
-      }
+          label: Videos,
+          name: videos,
+          widget: list,
+          allow_add: true,
+          fields:
+            [
+              { label: Text, name: text, widget: string },
+              { label: Video, name: video, widget: string },
+            ],
+        }
       - {
           label: Files,
           name: files,
@@ -52,7 +52,21 @@ collections:
             ],
         }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "list" }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "select",
+          multiple: true,
+          min: 1,
+          options:
+            [
+              "Educational Success & Power Hour",
+              "Sports & Fitness",
+              "S.T.E.A.M. & Arts",
+              "Games & Recreation",
+              "Healthy Lifestyles",
+            ],
+        }
   - name: "event-post"
     label: "Event Posts"
     folder: "src/pages/event-posts"
@@ -143,7 +157,13 @@ collections:
                     delete: false,
                     fields:
                       [
-                        { label: Percent, name: percent, widget: number, min: 0, max: 100 },
+                        {
+                          label: Percent,
+                          name: percent,
+                          widget: number,
+                          min: 0,
+                          max: 100,
+                        },
                         { label: Text, name: text, widget: text },
                       ],
                   },
