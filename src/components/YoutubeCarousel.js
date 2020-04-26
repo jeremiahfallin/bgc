@@ -18,7 +18,7 @@ const Carousel = ({ videos, setVideo }) => {
       visibleSlides={videos.length > 2 ? 3 : videos.length}
       infinite={true}
     >
-      <div style={{ width: "1000px" }}>
+      <div style={{ width: "100%" }}>
         <Slider>
           {videos.map((video, x) => {
             return (
