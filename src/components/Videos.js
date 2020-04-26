@@ -7,68 +7,6 @@ const Videos = ({ videos, setVideo, activeVideo }) => {
 
   return (
     <div className="container">
-      {videos.length > 1 && (
-        <div
-          className={`dropdown ${active ? "is-active" : ""}`}
-          style={{ marginBottom: "20px" }}
-        >
-          <div className="dropdown-trigger">
-            <button
-              className="button"
-              aria-haspopup="true"
-              aria-controls="dropdown-menu"
-              onClick={(e) => setActive((a) => !a)}
-            >
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplate: "1 / 1",
-                }}
-              >
-                {videos.map((video) => {
-                  return (
-                    <span
-                      key={video.video}
-                      style={{
-                        gridArea: "1 / 1",
-                        opacity: `${
-                          video.text === activeVideo.text ? "100" : "0"
-                        }`,
-                      }}
-                    >
-                      {video.text}
-                    </span>
-                  );
-                })}
-              </div>
-
-              <span className="icon is-small">
-                <i className="fas fa-angle-down" aria-hidden="true" />
-              </span>
-            </button>
-          </div>
-          <div className="dropdown-menu" id="dropdown-menu" role="menu">
-            <div className="dropdown-content">
-              {videos.map((video) => {
-                return (
-                  <div
-                    key={video.video}
-                    className="dropdown-item"
-                    style={{ cursor: "pointer" }}
-                    onClick={(e) => {
-                      setVideo({ text: video.text, video: video.video });
-                      setActive(false);
-                    }}
-                  >
-                    {video.text}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      )}
-
       <div className="columns">
         <div
           className="column"
@@ -94,7 +32,9 @@ const Videos = ({ videos, setVideo, activeVideo }) => {
           />
         </div>
       </div>
-      <YoutubeCarousel videos={videos} setVideo={setVideo} />
+      {videos.length > 1 && (
+        <YoutubeCarousel videos={videos} setVideo={setVideo} />
+      )}
     </div>
   );
 };

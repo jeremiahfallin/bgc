@@ -10,7 +10,6 @@ import {
 import "pure-react-carousel/dist/react-carousel.es.css";
 
 const Carousel = ({ videos, setVideo }) => {
-  console.log(videos);
   return (
     <CarouselProvider
       naturalSlideWidth={16}
@@ -19,7 +18,7 @@ const Carousel = ({ videos, setVideo }) => {
       visibleSlides={videos.length > 2 ? 3 : videos.length}
       infinite={true}
     >
-      <div className="container" style={{ width: "1000px" }}>
+      <div style={{ width: "1000px" }}>
         <Slider>
           {videos.map((video, x) => {
             return (
@@ -34,7 +33,7 @@ const Carousel = ({ videos, setVideo }) => {
                   style={{
                     position: "absolute",
                     top: 0,
-                    background: "#f0f0f0",
+                    background: "#f1f1f1",
                     padding: "5px 5px",
                     margin: "20px, 10px",
                   }}
@@ -45,28 +44,32 @@ const Carousel = ({ videos, setVideo }) => {
             );
           })}
         </Slider>
-        <ButtonBack
-          className="button"
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: 0,
-            transform: "translateY(-50%)",
-          }}
-        >
-          Back
-        </ButtonBack>
-        <ButtonNext
-          className="button"
-          style={{
-            position: "absolute",
-            top: "50%",
-            right: 0,
-            transform: "translateY(-50%)",
-          }}
-        >
-          Next
-        </ButtonNext>
+        {videos.length > 2 && (
+          <>
+            <ButtonBack
+              className="button"
+              style={{
+                position: "absolute",
+                top: "50%",
+                left: 0,
+                transform: "translateY(-50%)",
+              }}
+            >
+              Back
+            </ButtonBack>
+            <ButtonNext
+              className="button"
+              style={{
+                position: "absolute",
+                top: "50%",
+                right: 0,
+                transform: "translateY(-50%)",
+              }}
+            >
+              Next
+            </ButtonNext>
+          </>
+        )}
       </div>
     </CarouselProvider>
   );
