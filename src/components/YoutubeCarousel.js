@@ -33,9 +33,10 @@ const Carousel = ({ videos, setVideo }) => {
                   style={{
                     position: "absolute",
                     top: 0,
+                    fontSize: ".75em",
                     background: "#f1f1f1",
                     padding: "5px 5px",
-                    margin: "20px, 10px",
+                    margin: "5px 5px",
                   }}
                 >
                   {video.text}
