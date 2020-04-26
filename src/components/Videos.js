@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import YoutubeCarousel from "./YoutubeCarousel";
 
 const Videos = ({ videos, setVideo, activeVideo }) => {
   const [active, setActive] = useState(false);
 
   return (
-    <div classNameNameName="container">
+    <div className="container">
       {videos.length > 1 && (
         <div
           className={`dropdown ${active ? "is-active" : ""}`}
@@ -27,6 +28,7 @@ const Videos = ({ videos, setVideo, activeVideo }) => {
                 {videos.map((video) => {
                   return (
                     <span
+                      key={video.video}
                       style={{
                         gridArea: "1 / 1",
                         opacity: `${
@@ -39,6 +41,7 @@ const Videos = ({ videos, setVideo, activeVideo }) => {
                   );
                 })}
               </div>
+
               <span className="icon is-small">
                 <i className="fas fa-angle-down" aria-hidden="true" />
               </span>
@@ -49,6 +52,7 @@ const Videos = ({ videos, setVideo, activeVideo }) => {
               {videos.map((video) => {
                 return (
                   <div
+                    key={video.video}
                     className="dropdown-item"
                     style={{ cursor: "pointer" }}
                     onClick={(e) => {
@@ -64,9 +68,10 @@ const Videos = ({ videos, setVideo, activeVideo }) => {
           </div>
         </div>
       )}
-      <div classNameNameName="columns">
+
+      <div className="columns">
         <div
-          classNameNameName="column"
+          className="column"
           style={{
             position: "relative",
             paddingBottom: "56.25%" /* 16:9 */,
@@ -89,6 +94,7 @@ const Videos = ({ videos, setVideo, activeVideo }) => {
           />
         </div>
       </div>
+      <YoutubeCarousel videos={videos} setVideo={setVideo} />
     </div>
   );
 };

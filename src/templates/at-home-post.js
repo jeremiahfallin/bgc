@@ -15,15 +15,15 @@ export const AtHomePostTemplate = ({
   videos,
   tags,
   title,
-  helmet
+  helmet,
 }) => {
   const PostContent = contentComponent || Content;
   const [activeVideo, setActiveVideo] = useState({
     text: videos ? videos[0].text : null,
-    id: videos ? videos[0].video : null
+    id: videos ? videos[0].video : null,
   });
 
-  const setVideo = video => {
+  const setVideo = (video) => {
     setActiveVideo({ id: video.video, text: video.text });
   };
 
@@ -39,7 +39,7 @@ export const AtHomePostTemplate = ({
             <p>{description}</p>
             <ul>
               {files &&
-                files.map(file => {
+                files.map((file) => {
                   return (
                     <>
                       {file.text && (
@@ -77,7 +77,7 @@ export const AtHomePostTemplate = ({
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
                 <ul className="taglist">
-                  {tags.map(tag => (
+                  {tags.map((tag) => (
                     <li key={tag + `tag`}>
                       <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                     </li>
@@ -97,7 +97,7 @@ AtHomePostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object
+  helmet: PropTypes.object,
 };
 
 const AtHomePost = ({ data }) => {
@@ -130,8 +130,8 @@ const AtHomePost = ({ data }) => {
 
 AtHomePost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object
-  })
+    markdownRemark: PropTypes.object,
+  }),
 };
 
 export default AtHomePost;
