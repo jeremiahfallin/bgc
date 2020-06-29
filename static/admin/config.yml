@@ -128,18 +128,33 @@ collections:
               widget: "hidden",
               default: "index-page",
             }
-          - { label: Title, name: title, widget: string }
+          - { label: Title, name: title, widget: string, required: false }
           - { label: Image, name: image, widget: image }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Subheading, name: subheading, widget: string }
+          - { label: Heading, name: heading, widget: string, required: false }
+          - {
+              label: Subheading,
+              name: subheading,
+              widget: string,
+              required: false,
+            }
           - {
               label: Mainpitch,
               name: mainpitch,
               widget: object,
               fields:
                 [
-                  { label: Title, name: title, widget: string },
-                  { label: Description, name: description, widget: text },
+                  {
+                    label: Title,
+                    name: title,
+                    widget: string,
+                    required: false,
+                  },
+                  {
+                    label: Description,
+                    name: description,
+                    widget: text,
+                    required: false,
+                  },
                 ],
             }
           - { label: Description, name: description, widget: string }
