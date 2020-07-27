@@ -20,4 +20,8 @@ filesList:
     text: Teen Forms
 ---
 
-The Club is offering more than 30 different summer camps to choose from for youth entering 2nd-12th grades this year! The key word is FUN and we have a camp for every interest- whether it’s sports, like martial arts or Lacrosse, or a STEAM camp that delves into some Crazy Contraptions or even the Flat Earth Theory. Summer camps are an important part of youth development as they are designed to keep kids learning, active and engaged throughout the summer break. Instead of summer learning loss, Boys & Girls Club summer camps create brain gain throughout the summer!
+Programming at the Club is a lot different this summer due to COVID-19.
+
+Every week we are offering activities to develop SEL (Social/Emotional Learning), S.T.E.A.M. activities, and more! Programming is developed for two age groups: Elementary and 6th grade and up.
+
+Due to the guidelines from the Oregon Health Authority and the Early Learning Division, we are offering programming to five groups of ten youth. If you are interested in having your youth attend our facility, please call our office at 541.680.9505 to see if there are any openings or to be put on our waitlist.
