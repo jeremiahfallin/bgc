@@ -10,7 +10,6 @@ const ContactPagePreview = ({ entry, widgetFor }) => {
     <ContactPageTemplate
       title={data.title}
       content={widgetFor("body")}
-      image={data.image}
       phone={data.phone}
       address={data.address}
       emailList={emails && emails.toJS()}
