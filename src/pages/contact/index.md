@@ -1,8 +1,9 @@
 ---
 templateKey: "contact-page"
 title: Contact
-image: /img/img_8685.jpg
 phone: 541-440-9505
+address:
+  -
 emailList:
   - text: General
   - text: Sports
