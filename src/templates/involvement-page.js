@@ -10,10 +10,9 @@ export const InvolvementPageTemplate = ({
   title,
   content,
   contentComponent,
-  filesList
+  filesList,
 }) => {
   const PageContent = contentComponent || Content;
-  console.log(filesList);
 
   return (
     <div>
@@ -24,7 +23,7 @@ export const InvolvementPageTemplate = ({
             !!image.childImageSharp ? image.childImageSharp.fluid.src : image
           })`,
           backgroundPosition: `top left`,
-          backgroundAttachment: `fixed`
+          backgroundAttachment: `fixed`,
         }}
       >
         <div
@@ -34,7 +33,7 @@ export const InvolvementPageTemplate = ({
             lineHeight: "1",
             justifyContent: "space-around",
             alignItems: "left",
-            flexDirection: "column"
+            flexDirection: "column",
           }}
         >
           <h1
@@ -44,7 +43,7 @@ export const InvolvementPageTemplate = ({
               backgroundColor: "#0081c6",
               color: "white",
               lineHeight: "1",
-              padding: "0.25em"
+              padding: "0.25em",
             }}
           >
             {heading}
@@ -61,7 +60,7 @@ export const InvolvementPageTemplate = ({
                 </h2>
                 <ul>
                   {filesList &&
-                    filesList.map(files => {
+                    filesList.map((files) => {
                       return (
                         <div key={files.text}>
                           <li>
@@ -72,7 +71,7 @@ export const InvolvementPageTemplate = ({
                           <ul>
                             {files &&
                               files.files &&
-                              files["files"].map(file => {
+                              files["files"].map((file) => {
                                 return (
                                   <>
                                     {file.text && (
@@ -111,7 +110,7 @@ export const InvolvementPageTemplate = ({
 InvolvementPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
-  contentComponent: PropTypes.func
+  contentComponent: PropTypes.func,
 };
 
 const InvolvementPage = ({ data }) => {
@@ -132,7 +131,7 @@ const InvolvementPage = ({ data }) => {
 };
 
 InvolvementPage.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
 };
 
 export default InvolvementPage;

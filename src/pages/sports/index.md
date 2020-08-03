@@ -6,8 +6,10 @@ image: /img/img_8685.jpg
 intro:
   heading: Roseburg Sports Program
   description: >
-    Formerly the Roseburg Elementary Sports Program, the Roseburg Sports Program has been managed by the Boys & Girls Club since 2000. The Roseburg Sports Program organizes league play in volleyball, co-ed flag football, co-ed bowling, and girls & boys basketball for students in the Roseburg elementary and middle schools. The sports program strives to offer a sports experience that is safe and fun for ALL children where the emphasis is on skill-building, teamwork and participation.
+    Due to the current COVID-19 mandates, RSP is on hiatus. This page will be updated whenever programs are allowed to resume.
 ---
+
+**Formerly the Roseburg Elementary Sports Program, the Roseburg Sports Program has been managed by the Boys & Girls Club since 2000. The Roseburg Sports Program organizes league play in volleyball, co-ed flag football, co-ed bowling, and girls & boys basketball for students in the Roseburg elementary and middle schools. The sports program strives to offer a sports experience that is safe and fun for ALL children where the emphasis is on skill-building, teamwork and participation.**
 
 # Please note the insurance requirement:
 

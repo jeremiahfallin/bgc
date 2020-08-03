@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import YoutubeCarousel from "./YoutubeCarousel";
 
 const Videos = ({ videos, setVideo, activeVideo }) => {
-  const [active, setActive] = useState(false);
-
   return (
     <div className="container">
       <div className="columns">
