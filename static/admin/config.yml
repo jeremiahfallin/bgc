@@ -489,7 +489,7 @@ collections:
               label: "Address",
               name: "address",
               widget: "list",
-              allow_add: false,
+              allow_add: true,
               fields:
                 [
                   { label: Address, name: address, widget: string },
