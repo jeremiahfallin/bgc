@@ -13,7 +13,7 @@ const Navbar = () => {
   }, []);
 
   const {
-    allMarkdownRemark: { edges: posts }
+    allMarkdownRemark: { edges: posts },
   } = useStaticQuery(
     graphql`
       query DropdownQuery {
@@ -40,25 +40,25 @@ const Navbar = () => {
   subNav.programs = [
     { slug: "/programs", title: "Programs Overview" },
     { slug: "/summer", title: "Summer Programs" },
-    { slug: "/junior", title: "Junior Club" }
+    { slug: "/junior", title: "Junior Club" },
   ];
   subNav.about = [
     { slug: "/about/safety", title: "Child Safety" },
     { slug: "/about", title: "Who We Are" },
-    { slug: "/forms", title: "Club Forms" }
+    { slug: "/forms", title: "Club Forms" },
   ];
   subNav.sports = [];
   subNav.events = [{ slug: "/partners", title: "Our Community Partners" }];
-  posts.forEach(post => {
+  posts.forEach((post) => {
     if (post.node.fields.slug.includes("sports")) {
       subNav.sports.push({
         slug: post.node.fields.slug,
-        title: post.node.frontmatter.title
+        title: post.node.frontmatter.title,
       });
     } else if (post.node.fields.slug.includes("event-posts")) {
       subNav.events.push({
         slug: post.node.fields.slug,
-        title: post.node.frontmatter.title
+        title: post.node.frontmatter.title,
       });
     }
   });
@@ -82,7 +82,7 @@ const Navbar = () => {
           <div
             className={`navbar-burger burger ${active ? "is-active" : ""}`}
             data-target="navMenu"
-            onClick={() => setActive(a => !a)}
+            onClick={() => setActive((a) => !a)}
           >
             <span />
             <span />
@@ -99,8 +99,8 @@ const Navbar = () => {
               className={`navbar-item has-dropdown ${
                 selectedDropdown === "about" ? "is-active" : ""
               }`}
-              onClick={e =>
-                setSelectedDropdown(prev => (prev !== "about" ? "about" : ""))
+              onClick={(e) =>
+                setSelectedDropdown((prev) => (prev !== "about" ? "about" : ""))
               }
             >
               <div to="/about" className={`navbar-link`}>
@@ -127,8 +127,8 @@ const Navbar = () => {
               className={`navbar-item has-dropdown ${
                 selectedDropdown === "programs" ? "is-active" : ""
               }`}
-              onClick={e =>
-                setSelectedDropdown(prev =>
+              onClick={(e) =>
+                setSelectedDropdown((prev) =>
                   prev !== "programs" ? "programs" : ""
                 )
               }
@@ -152,8 +152,10 @@ const Navbar = () => {
               className={`navbar-item has-dropdown ${
                 selectedDropdown === "sports" ? "is-active" : ""
               }`}
-              onClick={e =>
-                setSelectedDropdown(prev => (prev !== "sports" ? "sports" : ""))
+              onClick={(e) =>
+                setSelectedDropdown((prev) =>
+                  prev !== "sports" ? "sports" : ""
+                )
               }
             >
               <div to="/sports" className={`navbar-link`}>
@@ -180,8 +182,10 @@ const Navbar = () => {
               className={`navbar-item has-dropdown ${
                 selectedDropdown === "events" ? "is-active" : ""
               }`}
-              onClick={e =>
-                setSelectedDropdown(prev => (prev !== "events" ? "events" : ""))
+              onClick={(e) =>
+                setSelectedDropdown((prev) =>
+                  prev !== "events" ? "events" : ""
+                )
               }
             >
               <div to="/events" className={`navbar-link`}>
@@ -203,48 +207,9 @@ const Navbar = () => {
                   );
                 })}
               </div>
-            </div>
-          </div>
-          <div className="navbar-end has-text-centered">
-            <div className="navbar-item level is-marginless">
-              <div className="container level-item">
-                <span className="icon is-small" style={{ marginRight: 4 }}>
-                  <i
-                    className="fas fa-phone"
-                    data-fa-transform="flip-h"
-                    aria-hidden="true"
-                  />
-                </span>
-                <a href="tel:+1-541-440-9505">541.440.9505</a>
-              </div>
-            </div>
-            <div className="navbar-item level is-marginless">
-              <div className="container level-item">
-                <span className="icon is-small" style={{ marginRight: 4 }}>
-                  <i className="fas fa-map-marker" aria-hidden="true" />
-                </span>{" "}
-                <a href={`https://goo.gl/maps/vgouJaD5Ec3m1L9G8`}>
-                  1144 NE Cedar Street
-                </a>
-              </div>
-            </div>
-            <div className="navbar-item level is-marginless">
-              <div className="container level-item">
-                <a
-                  className="icon is-small"
-                  style={{
-                    marginRight: 4
-                  }}
-                  href={`mailto:contact@bgcuv.org`}
-                >
-                  <i
-                    className="fas fa-envelope-square"
-                    data-fa-transform="flip-h"
-                    aria-hidden="true"
-                  />
-                </a>
-                <a href={`mailto:contact@bgcuv.org`}>Contact</a>
-              </div>
+              <Link className="navbar-item" to="/at-home">
+                At Home
+              </Link>
             </div>
           </div>
         </div>

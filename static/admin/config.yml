@@ -200,11 +200,7 @@ collections:
               label: Intro,
               name: intro,
               widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                ],
+              fields: [{ label: Description, name: description, widget: text }],
             }
           - { label: "Body", name: "body", widget: "markdown" }
       - file: "src/pages/about/index.md"
@@ -488,7 +484,7 @@ collections:
               label: "Address",
               name: "address",
               widget: "list",
-              allow_add: true,
+              allow_add: false,
               fields:
                 [
                   { label: Address, name: address, widget: string },

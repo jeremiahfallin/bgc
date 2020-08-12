@@ -5,102 +5,68 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
 export const ContactPageTemplate = ({
-  image,
-  heading,
   title,
+  phone,
   content,
   contentComponent,
-  filesList,
+  address,
+  emailList,
 }) => {
   const PageContent = contentComponent || Content;
 
   return (
     <div>
-      {image && (
-        <div
-          className="full-width-image margin-top-0"
-          style={{
-            backgroundImage: `url(${
-              !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-            })`,
-            backgroundPosition: `top left`,
-            backgroundAttachment: `fixed`,
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              height: "150px",
-              lineHeight: "1",
-              justifyContent: "space-around",
-              alignItems: "left",
-              flexDirection: "column",
-            }}
-          >
-            <h1
-              className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-              style={{
-                boxShadow: "#0081c6 0.5rem 0px 0px, #0081c6 -0.5rem 0px 0px",
-                backgroundColor: "#0081c6",
-                color: "white",
-                lineHeight: "1",
-                padding: "0.25em",
-              }}
-            >
-              {heading}
-            </h1>
+      <section class="hero is-primary">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">{title}</h1>
           </div>
         </div>
-      )}
+      </section>
       <section className="section section--gradient">
         <div className="container content">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="section">
-                <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                  {title}
-                </h2>
-                <ul>
-                  {filesList &&
-                    filesList.map((files) => {
+          <div className="column is-10 is-offset-1">
+            <div className="section">
+              <div className="columns">
+                <div className="column">
+                  <b>Phone: </b> <a href={`tel:+${phone}`}>{phone}</a>
+                  {emailList &&
+                    emailList.map((emails) => {
                       return (
-                        <div key={files.text}>
-                          <li>
-                            <b>
-                              <p>{files.text}</p>
-                            </b>
-                          </li>
-                          <ul>
-                            {files &&
-                              files.files &&
-                              files["files"].map((file) => {
-                                return (
-                                  <>
-                                    {file.text && (
-                                      <li key={file.text}>
-                                        {file.file ? (
-                                          <a
-                                            href={`${withPrefix("/")}img/${
-                                              file.file.relativePath
-                                            }`}
-                                          >
-                                            {file.text}
-                                          </a>
-                                        ) : (
-                                          file.text
-                                        )}
-                                      </li>
-                                    )}
-                                  </>
-                                );
-                              })}
-                          </ul>
+                        <div key={emails.text}>
+                          <b>{emails.text}</b>:{" "}
+                          <a href={`mailto:${emails.email}`}>{emails.email}</a>
                         </div>
                       );
                     })}
-                </ul>
-                <PageContent className="content" content={content} />
+                </div>
+                <div className="column is-two-thirds">
+                  <b>Main Office: </b>
+                  <a href={address.url}>{address.address}</a>
+                  <div
+                    className="column"
+                    style={{
+                      position: "relative",
+                      paddingBottom: "56.25%" /* 16:9 */,
+                      paddingTop: 25,
+                      height: 0,
+                    }}
+                  >
+                    <iframe
+                      style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "100%",
+                      }}
+                      frameBorder="0"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2907.3287205022825!2d-123.35567028451612!3d43.22356717913841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54c422c49484e679%3A0x59f260234d038aee!2s1144%20NE%20Cedar%20St%2C%20Roseburg%2C%20OR%2097470!5e0!3m2!1sen!2sus!4v1596430318987!5m2!1sen!2sus"
+                    />
+                  </div>
+                </div>
               </div>
+              <PageContent className="content" content={content} />
             </div>
           </div>
         </div>
@@ -117,16 +83,17 @@ ContactPageTemplate.propTypes = {
 
 const ContactPage = ({ data }) => {
   const { markdownRemark: post } = data;
+  console.log(data);
 
   return (
     <Layout>
       <ContactPageTemplate
         contentComponent={HTMLContent}
-        image={post.frontmatter.image}
         title={post.frontmatter.title}
-        heading={post.frontmatter.heading}
+        phone={post.frontmatter.phone}
+        address={post.frontmatter.address[0]}
         content={post.html}
-        filesList={post.frontmatter.filesList}
+        emailList={post.frontmatter.emailList}
       />
     </Layout>
   );
@@ -144,22 +111,14 @@ export const contactPageQuery = graphql`
       html
       frontmatter {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
+        phone
+        address {
+          address
+          url
         }
-        heading
-        filesList {
+        emailList {
           text
-          files {
-            text
-            file {
-              relativePath
-            }
-          }
+          email
         }
       }
     }

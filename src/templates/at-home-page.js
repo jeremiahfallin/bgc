@@ -15,6 +15,13 @@ export const AtHomePageTemplate = ({
   const PostContent = contentComponent || Content;
   return (
     <div>
+      <section class="hero is-primary">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">{title}</h1>
+          </div>
+        </div>
+      </section>
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
@@ -23,9 +30,6 @@ export const AtHomePageTemplate = ({
                 <div className="content">
                   {intro && (
                     <div className="content">
-                      <div className="tile">
-                        <h1 className="title">{intro ? intro.heading : ""}</h1>
-                      </div>
                       <div className="tile">
                         <h3 className="subtitle">
                           {intro ? intro.description : ""}
