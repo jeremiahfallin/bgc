@@ -5,6 +5,9 @@ date: 2020-09-10T22:09:36.843Z
 description: COVID-19 Update
 featuredpost: true
 featuredimage: /img/IMG_4648.jpg
+files:
+  - text: Text
+    file: /img/2019-20-Club-Calendar.pdf
 tags:
   - COVID-19
   - Sports
