@@ -10,15 +10,15 @@ export const AtHomePageTemplate = ({
   title,
   intro,
   content,
-  contentComponent,
+  contentComponent
 }) => {
   const PostContent = contentComponent || Content;
   return (
     <div>
-      <section class="hero is-primary">
-        <div class="hero-body">
-          <div class="container">
-            <h1 class="title">{title}</h1>
+      <section className="hero is-primary">
+        <div className="hero-body">
+          <div className="container">
+            <h1 className="title">{title}</h1>
           </div>
         </div>
       </section>
@@ -74,7 +74,7 @@ export const AtHomePageTemplate = ({
 
 AtHomePageTemplate.propTypes = {
   title: PropTypes.string,
-  heading: PropTypes.string,
+  heading: PropTypes.string
 };
 
 const AtHomePage = ({ data }) => {
@@ -96,9 +96,9 @@ const AtHomePage = ({ data }) => {
 AtHomePage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
+      frontmatter: PropTypes.object
+    })
+  })
 };
 
 export default AtHomePage;

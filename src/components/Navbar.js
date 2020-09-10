@@ -28,6 +28,7 @@ const Navbar = () => {
               }
               frontmatter {
                 title
+                active
               }
             }
           }
@@ -50,16 +51,18 @@ const Navbar = () => {
   subNav.sports = [];
   subNav.events = [{ slug: "/partners", title: "Our Community Partners" }];
   posts.forEach((post) => {
-    if (post.node.fields.slug.includes("sports")) {
-      subNav.sports.push({
-        slug: post.node.fields.slug,
-        title: post.node.frontmatter.title
-      });
-    } else if (post.node.fields.slug.includes("event-posts")) {
-      subNav.events.push({
-        slug: post.node.fields.slug,
-        title: post.node.frontmatter.title
-      });
+    if (post.node.frontmatter.active) {
+      if (post.node.fields.slug.includes("sports")) {
+        subNav.sports.push({
+          slug: post.node.fields.slug,
+          title: post.node.frontmatter.title
+        });
+      } else if (post.node.fields.slug.includes("event-posts")) {
+        subNav.events.push({
+          slug: post.node.fields.slug,
+          title: post.node.frontmatter.title
+        });
+      }
     }
   });
 
@@ -209,7 +212,7 @@ const Navbar = () => {
               </div>
             </div>
             <Link to="/at-home" className="navbar-item">
-              At Home
+              @ Home
             </Link>
           </div>
         </div>

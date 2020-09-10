@@ -4,6 +4,7 @@ title: Marcus and Jeremiah Area Mazes!
 date: 2020-04-20T00:19:29.556Z
 description: Solve some cool logic puzzles with Jeremiah and Marcus!
 featuredpost: true
+active: true
 featuredimage: /img/BoysandGirlsLogoHorizontal.png
 videos:
   - video: s_L-fp8gDzY

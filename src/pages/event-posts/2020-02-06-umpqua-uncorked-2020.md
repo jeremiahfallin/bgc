@@ -4,6 +4,7 @@ title: Umpqua Uncorked 2020
 date: 2020-02-06T19:55:10.623Z
 description: Our Umpqua Uncorked & On Tap event, scheduled for April 4, 2020, has been postponed.  Please check back for the rescheduled date, or contact Patti by email at plafreniere@bgcuv.org or phone 541-440-9505. Thank you for your support and understanding.
 featuredimage: /img/NoLinkWebLogoUUOT-758x1024.png
+active: true
 ---
 
 ![Umpqua Uncorked & Untapped Logo](/img/LOGOPage26BackgroundUncorked-1.png)

@@ -4,6 +4,7 @@ title: S'Mores at Home!
 date: 2020-04-22T07:17:30.864Z
 description: Staff member Izzy shows you guys how to make S'mores!
 featuredpost: true
+active: true
 featuredimage: /img/BoysandGirlsLogoHorizontal.png
 videos:
   - video: ZvVn8DqpON8

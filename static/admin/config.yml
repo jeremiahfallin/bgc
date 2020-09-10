@@ -29,6 +29,7 @@ collections:
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
       - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Active Post", name: "active", widget: "boolean" }
       - {
           label: Videos,
           name: videos,
@@ -83,6 +84,7 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Active Post", name: "active", widget: "boolean" }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "sports-post"
     label: "Sports Post"
@@ -100,6 +102,7 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
+      - { label: "Active Post", name: "active", widget: "boolean" }
       - { label: "Featured Image", name: "featuredimage", widget: image }
       - {
           label: Files,

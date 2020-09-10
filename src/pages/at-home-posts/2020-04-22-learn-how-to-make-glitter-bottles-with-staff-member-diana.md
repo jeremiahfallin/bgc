@@ -6,6 +6,7 @@ description: >-
   Glitter bottles are a great way to decompress and de-stress! Learn how to make
   one with Staff Member Diana!
 featuredpost: false
+active: true
 featuredimage: /img/favicon-32x32.png
 videos:
   - video: wxqDRHg6tFw
@@ -13,4 +14,5 @@ videos:
 tags:
   - S.T.E.A.M. & Arts
 ---
+
 Focusing on the way the glitter moves through the bottle is a great way to chill out when you're feeling stressed, but you need the bottle first! Learn how to make your own here.

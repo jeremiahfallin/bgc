@@ -8,10 +8,12 @@ description: >-
   interpretation or judgement. This practice relaxes the body and mind and helps
   to reduce stress.
 featuredpost: false
+active: true
 featuredimage: /img/2_copy.png
 tags:
   - Healthy Lifestyles
 ---
+
 ![Mindfullness-Handout](/img/2_copy.png "Mindfullness-Handout")
 
 Draw, trace, print out, or find a coloring book page to complete the mindful coloring activity!
