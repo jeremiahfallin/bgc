@@ -6,4 +6,4 @@ description: An annual fundraiser for youth.
 featuredimage: /img/ck2020.websiteimage.png
 active: true
 ---
-Celebrate Kids is going virtual this year! ![Celebrate Kids Info Image](https://bgcuv.netlify.app/img/ckinfo.png)
+Celebrate Kids is going virtual this year! ![Celebrate Kids Info Image](https://bgcuv.netlify.app/img/ckinfo.png "Celebrate Kids Info Image")
