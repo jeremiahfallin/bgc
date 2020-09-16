@@ -24,9 +24,7 @@ class EventRoll extends React.Component {
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${
-                            post.frontmatter.title
-                          }`
+                          alt: `featured image thumbnail for post ${post.frontmatter.title}`
                         }}
                       />
                     </Link>
@@ -54,7 +52,12 @@ export default () => (
       query EventRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "event-post" } } }
+          filter: {
+            frontmatter: {
+              templateKey: { eq: "event-post" }
+              active: { eq: true }
+            }
+          }
         ) {
           edges {
             node {
@@ -66,6 +69,7 @@ export default () => (
               frontmatter {
                 title
                 templateKey
+                active
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
                 featuredimage {

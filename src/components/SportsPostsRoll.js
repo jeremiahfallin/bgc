@@ -22,7 +22,12 @@ export default () => (
       query SportsRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "sports-post" } } }
+          filter: {
+            frontmatter: {
+              templateKey: { eq: "sports-post" }
+              active: { eq: true }
+            }
+          }
         ) {
           edges {
             node {
@@ -34,6 +39,7 @@ export default () => (
               frontmatter {
                 title
                 templateKey
+                active
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
                 featuredimage {
