@@ -4,15 +4,14 @@
 
 **Note:** This starter uses [Gatsby v2](https://www.gatsbyjs.org/blog/2018-09-17-gatsby-v2/).
 
-This repo contains an example business website that is built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](https://www.netlifycms.org): **[Demo Link](https://gatsby-netlify-cms.netlify.com/)**.
+This repo contains an example business website that is built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](https://www.netlifycms.org): **[Demo Link](https://gatsby-bgc-netlify-cms.netlify.com/)**.
 
 It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
 
 ## Features
 
-- A simple landing page with blog functionality built with Netlify CMS
+- A simple landing page with "blog" (Event, Sports, and At-Home posts) functionality built with Netlify CMS
 - Editabe Pages
-- Create Sports and Event posts from Netlify CMS
 - Tags: Separate page for posts under each tag
 - Basic directory organization
 - Uses Bulma for styling, but size is reduced by `purge-css-plugin`
@@ -21,18 +20,17 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 - Separate components for everything
 - Netlify deploy configuration
 - Netlify function support
-- Perfect score on Lighthouse for SEO, Accessibility and Performance (wip:PWA)
 - ...and more
 
 ## Prerequisites
 
-- Node (I recommend using v8.2.0 or higher)
+- Node (v8.2.0 or higher recommended)
 - [Gatsby CLI](https://www.gatsbyjs.org/docs/)
 - [Netlify CLI](https://github.com/netlify/cli)
 
 ## Getting Started (Recommended)
 
-Netlify CMS can run in any frontend web environment, but the quickest way to try it out is by running it on a pre-configured starter site with Netlify. The example here is the Kaldi coffee company template (adapted from [One Click Hugo CMS](https://github.com/netlify-templates/one-click-hugo-cms)). Use the button below to build and deploy your own copy of the repository:
+Netlify CMS can run in any frontend web environment, but the quickest way to try it out is by running it on a pre-configured starter site with Netlify. The example here is a Boys & Girls Club template (adapted from [Gatsby Starter Netlify CMS](https://gatsby-netlify-cms.netlify.com/)). Use the button below to build and deploy your own copy of the repository:
 
 <a href="https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/gatsby-starter-netlify-cms&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
 
