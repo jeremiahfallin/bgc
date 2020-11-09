@@ -35,7 +35,9 @@
     "showdown": "1.9.1",
     "uuid": "^3.2.1"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
