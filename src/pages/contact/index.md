@@ -1,17 +1,12 @@
 ---
 templateKey: contact-page
 title: Contact
-phone: 541-440-9505
+phone: 123-456-7890
 address:
-  - address: '1144 NE Cedar Street, Roseburg, OR 97470'
-    url: 'https://goo.gl/maps/vgouJaD5Ec3m1L9G8'
+  - address: An Address
+    url: 'https://goo.gl/maps/Q45eLzQGM48dY1d89'
 emailList:
   - text: General Inquiries
-    email: contactus@bgcuv.org
-  - text: CEO
-    email: blake@bgcuv.org
-  - text: Sports
-    email: jsteele@bgcuv.org
+    email: email@gmail.com
 ---
-
-Due to COVID-19 our business office is closed. If you have any questions regarding our programs, policy, employment openings, or anything else please call between 7:30 and 5:30 Monday through Friday.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
