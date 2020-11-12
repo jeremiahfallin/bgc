@@ -4,7 +4,7 @@ title: Contact
 phone: 123-456-7890
 address:
   - address: An Address
-    url: 'https://goo.gl/maps/Q45eLzQGM48dY1d89'
+    url: 'https://goo.gl/maps/4LrYjzngD3b6ZaKq5'
 emailList:
   - text: General Inquiries
     email: email@gmail.com
