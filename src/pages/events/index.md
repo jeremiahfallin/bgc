@@ -1,11 +1,11 @@
 ---
-templateKey: "events-page"
+templateKey: events-page
 path: /events
 title: Fundraising Events
-image: /img/img_8685.jpg
+image: /img/pexels-yentl-jacobs-157811.jpg
 intro:
-  heading: BGCUV Fundraisers
-  description: >
+  heading: Fundraisers
+  description: |
     Fundraising events
 ---
 
