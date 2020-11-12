@@ -1,30 +1,23 @@
 ---
-templateKey: "involvement-page"
+templateKey: involvement-page
 path: /involvement
 title: Join our Team
-image: /img/img_8685.jpg
-heading: This is BGCUV
+image: /img/pexels-yentl-jacobs-157811.jpg
+heading: This is Us
 filesList:
   - files:
-      - file: /img/BGCUV-Employment-Application-1.pdf
-        text: BGCUV Employment Application
+      - file: /img/2_copy.png
+        text: Employment Application
     text: Employment
   - files:
-      - file: /img/Volunteer-Application1.pdf
+      - file: /img/2_copy.png
         text: Volunteer Application Form
-      - file: /img/Volunteer-Interest-Form.pdf
-        text: Volunteer Interest Form
     text: Volunteer
 ---
-
 ### Be Someone to Someone
 
-Whether it's through volunteering or joining our team of employees, this organization runs on people. People who believe in our mission and who enjoy working in an energetic atmosphere around youth.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ### Volunteer Opportunities
 
-Everybody who was ever anyone had a someone. A teacher, a coach, a mentor, a friend. Someone who stood at a crucial crossroads and pointed the way.
-Could you be that someone?
-Could you spare a few hours to make a difference in the life of a child?
-
-If you're interested in joining our team, please call or visit our office Monday - Friday between 8am and 5pm to ask about opportunities.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
