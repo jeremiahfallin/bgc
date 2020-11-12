@@ -49,7 +49,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta
           property="og:image"
-          content={`${withPrefix("/")}img/BoysandGirlsLogoHorizontal.png`}
+          content={`${withPrefix("/")}img/BoysAndGirlsClubsLogo.jpg`}
         />
       </Helmet>
       <Navbar />

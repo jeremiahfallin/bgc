@@ -10,7 +10,7 @@ export default ({ image, title, subheading }) => {
             !!image.childImageSharp ? image.childImageSharp.fluid.src : image
           })`,
           backgroundPosition: `top left`,
-          backgroundAttachment: `fixed`
+          backgroundAttachment: `fixed`,
         }}
       >
         <div
@@ -21,7 +21,7 @@ export default ({ image, title, subheading }) => {
             lineHeight: "1",
             justifyContent: "space-around",
             alignItems: "left",
-            flexDirection: "column"
+            flexDirection: "column",
           }}
         >
           {title && (
@@ -33,7 +33,7 @@ export default ({ image, title, subheading }) => {
                 color: "white",
                 lineHeight: "1",
                 padding: "0.25em",
-                marginBottom: ".5em"
+                marginBottom: ".5em",
               }}
             >
               {title}
@@ -46,14 +46,14 @@ export default ({ image, title, subheading }) => {
                 color: "white",
                 lineHeight: "1",
                 padding: "0.25em",
-                marginBottom: "1em"
+                marginBottom: "1em",
               }}
             >
               <span
                 style={{
                   boxShadow: "#0081c6 0.5rem 0px 0px, #0081c6 -0.5rem 0px 0px",
                   backgroundColor: "#0081c6",
-                  padding: "0.25em"
+                  padding: "0.25em",
                 }}
               >
                 {subheading}
@@ -62,7 +62,7 @@ export default ({ image, title, subheading }) => {
           )}
           <div className="column is-10 is-offset-7">
             <a
-              href="https://interland3.donorperfect.net/weblink/weblink.aspx?name=bgcumppqua&id=20"
+              href="https://gatsby-bgc-netlify-cms.netlify.app/"
               className="button is-primary is-large"
             >
               Donate Today

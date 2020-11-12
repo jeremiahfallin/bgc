@@ -21,7 +21,7 @@ export default ({ percent, color, icon }) => {
           strokeLinecap: "butt",
           fill: "none",
           strokeDasharray: `${2 * Math.PI * 90}`,
-          strokeDashoffset: `${2 * Math.PI * 90 * (1 - percent)}`
+          strokeDashoffset: `${2 * Math.PI * 90 * (1 - percent)}`,
         }}
         cx="100"
         cy="100"

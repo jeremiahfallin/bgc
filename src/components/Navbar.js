@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import netlifyIdentity from "netlify-identity-widget";
 
-import logo from "../img/BoysandGirlsLogoHorizontal.png";
+import logo from "../img/BoysAndGirlsClubLogo.jpg";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -13,7 +13,7 @@ const Navbar = () => {
   }, []);
 
   const {
-    allMarkdownRemark: { edges: posts }
+    allMarkdownRemark: { edges: posts },
   } = useStaticQuery(
     graphql`
       query DropdownQuery {
@@ -41,12 +41,12 @@ const Navbar = () => {
   subNav.programs = [
     { slug: "/programs", title: "Programs Overview" },
     { slug: "/summer", title: "Summer Programs" },
-    { slug: "/junior", title: "Junior Club" }
+    { slug: "/junior", title: "Junior Club" },
   ];
   subNav.about = [
     { slug: "/about/safety", title: "Child Safety" },
     { slug: "/about", title: "Who We Are" },
-    { slug: "/forms", title: "Club Forms" }
+    { slug: "/forms", title: "Club Forms" },
   ];
   subNav.sports = [];
   subNav.events = [{ slug: "/partners", title: "Our Community Partners" }];
@@ -55,12 +55,12 @@ const Navbar = () => {
       if (post.node.fields.slug.includes("sports")) {
         subNav.sports.push({
           slug: post.node.fields.slug,
-          title: post.node.frontmatter.title
+          title: post.node.frontmatter.title,
         });
       } else if (post.node.fields.slug.includes("event-posts")) {
         subNav.events.push({
           slug: post.node.fields.slug,
-          title: post.node.frontmatter.title
+          title: post.node.frontmatter.title,
         });
       }
     }
