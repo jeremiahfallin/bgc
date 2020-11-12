@@ -1,10 +1,14 @@
 ---
-templateKey: "at-home-page"
+templateKey: at-home-page
 path: /at-home
 title: BGCUV @ Home
 intro:
-  description: >
-    The Boys & Girls Club of the Umpqua Valley is providing virtual content! All of the staff you know and built relationships are here to keep you company while we are all isolating. Whatever your interest, whether it be Art, Sports, or Math you can find activities of all kinds through this portal!
+  description: >-
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 ---
-
-If you need homework help or have any specific types of activities you want to see, feel free to email us at [contact@bgcuv.org](contact@bgcuv.org) and we'll see what we can do!
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
