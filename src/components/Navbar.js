@@ -123,6 +123,9 @@ const Navbar = () => {
                 })}
               </div>
             </div>
+            <Link className="navbar-item" to="/contact">
+              Contact Us
+            </Link>
             <Link className="navbar-item" to="/involvement">
               Get Involved
             </Link>
