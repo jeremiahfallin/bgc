@@ -53,15 +53,14 @@ export const ContactPageTemplate = ({
                     }}
                   >
                     <iframe
-                      style={{
-                        position: "absolute",
-                        top: 0,
-                        left: 0,
-                        width: "100%",
-                        height: "100%",
-                      }}
-                      frameBorder="0"
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2907.3287205022825!2d-123.35567028451612!3d43.22356717913841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54c422c49484e679%3A0x59f260234d038aee!2s1144%20NE%20Cedar%20St%2C%20Roseburg%2C%20OR%2097470!5e0!3m2!1sen!2sus!4v1596430318987!5m2!1sen!2sus"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53023.03557042119!2d-84.34590450087259!3d33.83966507565114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5047a3b061fb3%3A0x123010dbc2c635b2!2sCenters%20for%20Disease%20Control%20and%20Prevention!5e0!3m2!1sen!2sus!4v1605228779585!5m2!1sen!2sus"
+                      width="600"
+                      height="450"
+                      frameborder="0"
+                      style="border:0;"
+                      allowfullscreen=""
+                      aria-hidden="false"
+                      tabindex="0"
                     />
                   </div>
                 </div>
