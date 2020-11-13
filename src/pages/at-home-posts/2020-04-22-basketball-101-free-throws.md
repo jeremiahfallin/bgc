@@ -1,14 +1,14 @@
 ---
 templateKey: at-home-post
-title: "Basketball 101: Free Throws"
+title: 'Basketball 101: Free Throws'
 date: 2020-04-22T19:20:21.038Z
-description: "See the best form for shooting free throws, made by Dick's Sporting Goods!"
+description: 'See the best form for shooting free throws, made by Dick''s Sporting Goods!'
 featuredpost: false
+featuredimage: /img/safari-pinned-tab.svg
 active: true
-featuredimage: /img/IMG_4648.jpg
 videos:
-  - video: "TVNZrYdriTM "
-    text: "Basketball 101: Free Throws"
+  - video: 'TVNZrYdriTM '
+    text: 'Basketball 101: Free Throws'
 tags:
   - Sports & Fitness
 ---
