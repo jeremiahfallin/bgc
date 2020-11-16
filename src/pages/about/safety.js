@@ -8,13 +8,10 @@ export default () => (
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="section column">
-              <h1>
-                At Boys & Girls Club of the Umpqua Valley, Child Safety is our
-                number 1 job.
-              </h1>
+              <h1>At Boys & Girls Club, Child Safety is our number 1 job.</h1>
               <p>
                 Ensuring child safety is fundamental to the mission of{" "}
-                <b>Boys & Girls Club of the Umpqua Valley</b>
+                <b>Boys & Girls Club.</b>
               </p>
               <h2>
                 The Safety and Well-being of Young People is Our Number One
@@ -31,12 +28,12 @@ export default () => (
             <div className="section columns">
               <div className="column">
                 <p>
-                  <b>Culture of Safety:</b> Boys & Girls Club of the Umpqua
-                  Valley continually updates robust safety policies, programs
-                  and training for our staff and volunteers that are designed to
-                  promote child safety and protect young people from threats
-                  that are present in our society. We implement layers of safety
-                  policies and guidelines to keep our kids safe including:
+                  <b>Culture of Safety:</b> Boys & Girls Club continually
+                  updates robust safety policies, programs and training for our
+                  staff and volunteers that are designed to promote child safety
+                  and protect young people from threats that are present in our
+                  society. We implement layers of safety policies and guidelines
+                  to keep our kids safe including:
                 </p>
                 <ul>
                   <li>
@@ -58,10 +55,10 @@ export default () => (
                   <li>Ongoing staff training</li>
                 </ul>
                 <p>
-                  <b>Safety Policies:</b> Boys & Girls Club of the Umpqua Valley
-                  has comprehensive safety policies in place that protect youth
-                  – including, but not limited to, supervision, transportation,
-                  communication and prohibiting private one-on-one contact.
+                  <b>Safety Policies:</b> Boys & Girls Club has comprehensive
+                  safety policies in place that protect youth – including, but
+                  not limited to, supervision, transportation, communication and
+                  prohibiting private one-on-one contact.
                 </p>
 
                 <p>
@@ -69,10 +66,10 @@ export default () => (
                   all staff, members and families to report any incident or
                   situation they feel is unsafe. Through our national
                   partnership with <b>Praesidium</b>, one of the nation’s
-                  leading safety experts, Boys & Girls Club of the Umpqua Valley
-                  members and staff have access to a confidential 24-hour
-                  toll-free Child Safety Hotline, <b>866-607-SAFE (7233)</b> or
-                  email <b>SafeClub@Praesidiuminc.com</b>.
+                  leading safety experts, Boys & Girls Club members and staff
+                  have access to a confidential 24-hour toll-free Child Safety
+                  Hotline, <b>866-607-SAFE (7233)</b> or email{" "}
+                  <b>SafeClub@Praesidiuminc.com</b>.
                 </p>
                 <p>
                   <b>
@@ -91,12 +88,12 @@ export default () => (
               </div>
               <div className="column">
                 <p>
-                  <b>Required Immediate Reporting:</b> Boys & Girls Club of the
-                  Umpqua Valley staff and volunteers are all mandated reporters.
-                  We are required to report any critical incident/safety concern
-                  to local authorities immediately. We are also required to
-                  report any critical incident to Boys & Girls Clubs of America
-                  within 24 hours.
+                  <b>Required Immediate Reporting:</b> Boys & Girls Club staff
+                  and volunteers are all mandated reporters. We are required to
+                  report any critical incident/safety concern to local
+                  authorities immediately. We are also required to report any
+                  critical incident to Boys & Girls Clubs of America within 24
+                  hours.
                 </p>
                 <p>
                   <b>Mandatory Annual Safety Assessments:</b> We complete a
@@ -113,10 +110,10 @@ export default () => (
                   Children, and the National Children’s Advocacy Center.
                 </p>
                 <p>
-                  <b>Safety Committee:</b> Boys & Girls Club of the Umpqua
-                  Valley has a dedicated safety committee to provide input and
-                  guidance on local policies and safety strategies. Priorities
-                  and initiatives include:
+                  <b>Safety Committee:</b> Boys & Girls Club has a dedicated
+                  safety committee to provide input and guidance on local
+                  policies and safety strategies. Priorities and initiatives
+                  include:
                 </p>
                 <ul>
                   <li>
@@ -170,14 +167,11 @@ export default () => (
                     youth in times of crisis
                   </li>
                 </ul>
-                <p>
-                  Locally, Boys & Girls Club of the Umpqua Valley partners with:
-                </p>
+                <p>Locally, Boys & Girls Club partners with:</p>
                 <ul>
-                  <li>City of Roseburg, OR</li>
-                  <li>Douglas County Sheriff’s Department</li>
-                  <li>Roseburg Police Department</li>
-                  <li>Roseburg School District</li>
+                  <li>Sheriff’s Department</li>
+                  <li>Police Department</li>
+                  <li>School District</li>
                 </ul>
                 <p>
                   Nationally, Boys & Girls Clubs of America has advocated the
@@ -192,8 +186,7 @@ export default () => (
                 <p>
                   America’s young people deserve nothing less than our constant
                   focus on their safety and our firm commitment to protect every
-                  child who is entrusted to our care at Boys & Girls Club of the
-                  Umpqua Valley. To{" "}
+                  child who is entrusted to our care at Boys & Girls Club. To{" "}
                   <a
                     href={
                       "https://www.bgca.org/kids-in-need/child-safety/safety-policies-and-actions"
